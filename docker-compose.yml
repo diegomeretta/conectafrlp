@@ -1,0 +1,18 @@
+version: '3'
+    
+services:
+  mariadb:
+    image: mariadb:10.3
+    environment:
+      - MARIADB_DB=postgres
+      - MARIADB_USER=postgres
+      - MARIADB_PASSWORD=postgres
+  web:
+    build: .
+    command: python pruebauno/manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+    depends_on:
+      - mariadb
