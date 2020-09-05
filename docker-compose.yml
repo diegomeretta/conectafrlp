@@ -1,23 +1,29 @@
 version: '3'
-    
 services:
-  # mariadb:
-  #   image: mariadb:10.3
-  #   container_name: mariadb
-  #   restart: unless-stopped
-  #   environment:
-  #     - MARIADB_DB=postgres
-  #     - MARIADB_USER=postgres
-  #     - MARIADB_PASSWORD=postgres
-
-  web:
-    build: .
-    container_name: web
+  app:
+    container_name: app
     restart: unless-stopped
-    command: python manage.py runserver 0.0.0.0:8000
-    volumes:
-      - .:/code
+    env_file: .env
+    build: .
     ports:
-      - "8000:8000"
-    # depends_on:
-    #   - mariadb
+      - "5005:5005"
+    networks:
+      - web_network
+
+  nginx:
+    container_name: nginx
+    restart: unless-stopped
+    image: "nginx:latest"
+    ports:
+      - "85:85"
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+    networks:
+      - web_network
+    depends_on: 
+      - app
+
+networks:
+  web_network:
+    driver: bridge
+ 
