@@ -9,9 +9,16 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.template import loader
 from django.http import HttpResponse
 from django import template
+from .forms import ChatGroupForm
 
 @login_required(login_url="/login/")
 def index(request):
+    form = ChatGroupForm(request.POST or None)
+    msg = None
+
+    return render(request, "home.html")
+
+def home(request):
     return render(request, "index.html")
 
 @login_required(login_url="/login/")
