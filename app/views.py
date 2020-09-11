@@ -10,14 +10,18 @@ from django.template import loader
 from django.http import HttpResponse
 from django import template
 from .forms import ChatGroupForm
+from os import system
+
 
 @login_required(login_url="/login/")
 def index(request):
     form = ChatGroupForm(request.POST or None)
     msg = None
 
-    return render(request, "home.html")
+    if request.method == "POST":
+        system('python pytogram.py')
 
+    return render(request, "home.html", { 'form' : form})
 def home(request):
     return render(request, "index.html")
 
