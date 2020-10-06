@@ -1,29 +1,29 @@
 from django import forms
-from .models import ChatGroup
+from .models import Usuario
 
-class ChatGroupForm(forms.Form):
-    name = forms.CharField(
+class AltaUsuarioForm(forms.Form):
+    username = forms.CharField(
         widget=forms.TextInput(
             attrs={
-                "placeholder" : "Chat Group Name",                
+                "placeholder" : "Nombre de usuario de Telegram",                
                 "class": "form-control"
             }
         ))
-    user_chat1 = forms.CharField(
+    api_id = forms.CharField(
         widget=forms.TextInput(
             attrs={
-                "placeholder" : "Usuario",                
+                "placeholder" : "API_ID de Telegram",                
                 "class": "form-control"
             }
         ))
-    user_chat2 = forms.CharField(
+    api_hash = forms.CharField(
         widget=forms.TextInput(
             attrs={
-                "placeholder" : "Usuario",                
+                "placeholder" : "API_HASH de Telegram",                
                 "class": "form-control"
             }
         ))
 
     class Meta:
-        model = ChatGroup
-        fields = ['name', 'user_chat1', 'user_chat2']
+        model = Usuario
+        fields = ['username', 'api_id', 'api_hash']

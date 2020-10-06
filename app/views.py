@@ -9,19 +9,21 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.template import loader
 from django.http import HttpResponse
 from django import template
-from .forms import ChatGroupForm
+from .forms import AltaUsuarioForm
+from .models import Usuario
 from os import system
 
 
 @login_required(login_url="/login/")
 def index(request):
-    form = ChatGroupForm(request.POST or None)
-    msg = None
 
-    if request.method == "POST":
-        system('python pytogram.py')
+    usuarios = Usuario.objects.filter(username=request.user.username)
+    if usuarios.first():
+        return render(request, "home.html")
+    else:
+        form = AltaUsuarioForm(request.POST or None)
+        return render(request, "solicitar_keys.html", { 'form' : form})
 
-    return render(request, "home.html", { 'form' : form})
 def home(request):
     return render(request, "index.html")
 
@@ -45,3 +47,24 @@ def pages(request):
     
         html_template = loader.get_template( 'error-500.html' )
         return HttpResponse(html_template.render(context, request))
+
+
+def solicitar_keys(request):
+
+    msg     = None
+    success = False
+
+    if request.method == "POST":
+        form = AltaUsuarioForm(request.POST)
+        if form.is_valid():
+            usuario = Usuario(username = form.cleaned_data.get("username"), api_id = form.cleaned_data.get("api_id"), api_hash = form.cleaned_data.get("api_hash"))
+            usuario.save()
+            # TODO VER PORQUE NO GRABA
+            msg     = 'Datos guardados'
+            success = True
+        else:
+            msg = 'Form is not valid'    
+    else:
+        form = AltaUsuarioForm()
+
+    return render(request, "index.html", {"form": form, "msg" : msg, "success" : success })
