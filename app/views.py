@@ -53,6 +53,7 @@ def solicitar_keys(request):
         form = AltaUsuarioForm(request.POST)
         if form.is_valid():
             usuario = form.save(commit=False)
+            usuario.username = request.user.username
             usuario.save()
 
             return redirect('/')

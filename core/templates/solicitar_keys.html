@@ -27,10 +27,6 @@
                                 <div class="card-body">
                                     <form role="form" method="post" action="solicitarkeys">
                                         {% csrf_token %}    
-                                        Nombre de Usuario               
-                                        <div class="input-group mb-3">
-                                            {{ form.username }}
-                                        </div>
                                         api_id
                                         <div class="input-group mb-3">
                                             {{ form.api_id }}

@@ -4,12 +4,8 @@ from .models import Usuario
 class AltaUsuarioForm(ModelForm):
     class Meta:
         model = Usuario
-        fields = "__all__"
+        fields = ["api_id", "api_hash"]
         widgets = {
-            'username': TextInput(attrs={
-                "placeholder" : "Nombre de usuario de Telegram",                
-                "class": "form-control"
-            }),
             'api_id': TextInput(attrs={
                 "placeholder" : "API_ID de Telegram",                
                 "class": "form-control"
