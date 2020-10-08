@@ -48,23 +48,15 @@ def pages(request):
         html_template = loader.get_template( 'error-500.html' )
         return HttpResponse(html_template.render(context, request))
 
-
 def solicitar_keys(request):
-
-    msg     = None
-    success = False
-
     if request.method == "POST":
         form = AltaUsuarioForm(request.POST)
         if form.is_valid():
-            usuario = Usuario(username = form.cleaned_data.get("username"), api_id = form.cleaned_data.get("api_id"), api_hash = form.cleaned_data.get("api_hash"))
+            usuario = form.save(commit=False)
             usuario.save()
-            # TODO VER PORQUE NO GRABA
-            msg     = 'Datos guardados'
-            success = True
-        else:
-            msg = 'Form is not valid'    
-    else:
-        form = AltaUsuarioForm()
 
-    return render(request, "index.html", {"form": form, "msg" : msg, "success" : success })
+            return redirect('/')
+        else:
+            form = AltaUsuarioForm()
+
+        return render(request, 'index.html', {'form':form})
