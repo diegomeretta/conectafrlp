@@ -1,0 +1,48 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Crear grupo {% endblock %} 
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <div class="pcoded-content">
+        <div class="pcoded-inner-content">
+            <!-- [ breadcrumb ] start -->
+
+            <!-- [ breadcrumb ] end -->
+            <div class="main-body">
+                <div class="page-wrapper">
+                    <!-- [ Main Content ] start -->
+                    <div class="row">
+                        <div class="col-md-12 col-xl-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5>Creación de grupos</h5>
+                                </div>
+                                <div class="card-body">
+                                    <form role="form" method="post" action="creategroup">
+                                        {% csrf_token %}    
+                                        Nombre del grupo
+                                        <div class="input-group mb-3">
+                                            {{ form.name }}
+                                        </div>
+                                        <button type="submit" class="btn btn-primary shadow-2 mb-4">Crear</button>
+                
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- [ Main Content ] end -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}
