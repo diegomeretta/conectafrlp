@@ -9,7 +9,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.template import loader
 from django.http import HttpResponse
 from django import template
-from .forms import AltaUsuarioForm
+from .forms import AltaUsuarioForm, AltaGrupoForm
 from .models import Usuario
 from os import system
 
@@ -19,7 +19,7 @@ def index(request):
 
     usuarios = Usuario.objects.filter(username=request.user.username)
     if usuarios.first():
-        return render(request, "home.html")
+        return render(request, "index.html")
     else:
         form = AltaUsuarioForm(request.POST or None)
         return render(request, "solicitar_keys.html", { 'form' : form})
@@ -61,3 +61,20 @@ def solicitar_keys(request):
             form = AltaUsuarioForm()
 
         return render(request, 'index.html', {'form':form})
+
+@login_required(login_url="/login/")
+def create_group(request):
+    if request.method == "POST":
+        form = AltaGrupoForm(request.POST)
+        if form.is_valid():
+            grupo = form.save(commit=False)
+            grupo.save()
+
+            return redirect('/')
+        else:
+            form = AltaGrupoForm()
+
+        return render(request, 'create_group.html', {'form':form})
+    elif request.method == "GET":
+        form = AltaGrupoForm(request.POST or None)
+        return render(request, "create_group.html", { 'form' : form})
