@@ -9,8 +9,8 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.template import loader
 from django.http import HttpResponse
 from django import template
-from .forms import AltaUsuarioForm, AltaGrupoForm
-from .models import Usuario
+from .forms import AltaUsuarioForm, AltaGrupoForm, CreateContactForm
+from .models import Usuario, Contact
 from os import system
 
 
@@ -78,3 +78,20 @@ def create_group(request):
     elif request.method == "GET":
         form = AltaGrupoForm(request.POST or None)
         return render(request, "create_group.html", { 'form' : form})
+
+@login_required(login_url="/login/")
+def create_contact(request):
+    if request.method == "POST":
+        form = CreateContactForm(request.POST)
+        if form.is_valid():
+            contact = form.save(commit=False)
+            contact.save()
+
+            return redirect('/')
+        else:
+            form = CreateContactForm()
+
+        return render(request, 'create-contact.html', {'form':form})
+    elif request.method == "GET":
+        form = CreateContactForm(request.POST or None)
+        return render(request, "create-contact.html", { 'form' : form})

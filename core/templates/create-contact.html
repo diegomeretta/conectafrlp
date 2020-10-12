@@ -1,0 +1,56 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Crear grupo {% endblock %} 
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <div class="pcoded-content">
+        <div class="pcoded-inner-content">
+            <!-- [ breadcrumb ] start -->
+
+            <!-- [ breadcrumb ] end -->
+            <div class="main-body">
+                <div class="page-wrapper">
+                    <!-- [ Main Content ] start -->
+                    <div class="row">
+                        <div class="col-md-12 col-xl-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5>Agregar Contacto</h5>
+                                </div>
+                                <div class="card-body">
+                                    <form role="form" method="post" action="createcontact">
+                                        {% csrf_token %}    
+                                        Nombre del usuario en Telegram
+                                        <div class="input-group mb-3">
+                                            {{ form.name }}
+                                        </div>
+                                        Nombre
+                                        <div class="input-group mb-3">
+                                            {{ form.first_name }}
+                                        </div>
+                                        Appellido
+                                        <div class="input-group mb-3">
+                                            {{ form.last_name }}
+                                        </div>
+                                        <button type="submit" class="btn btn-primary shadow-2 mb-4">Agregar Contacto</button>
+                
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- [ Main Content ] end -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}
