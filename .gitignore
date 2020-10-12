@@ -21,5 +21,8 @@ venv
 # javascript
 package-lock.json
 
+# migrations
+app/migrations/*
+
 staticfiles/*
 !staticfiles/.gitkeep 
