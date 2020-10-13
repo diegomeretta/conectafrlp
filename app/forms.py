@@ -4,7 +4,7 @@ from .models import Usuario, Group
 class AltaUsuarioForm(ModelForm):
     class Meta:
         model = Usuario
-        fields = ["api_id", "api_hash"]
+        fields = ["api_id", "api_hash", "phone"]
         widgets = {
             'api_id': TextInput(attrs={
                 "placeholder" : "API_ID de Telegram",                
@@ -12,6 +12,10 @@ class AltaUsuarioForm(ModelForm):
             }),
             'api_hash': TextInput(attrs={
                 "placeholder" : "API_HASH de Telegram",                
+                "class": "form-control"
+            }),
+            'phone': TextInput(attrs={
+                "placeholder" : "Número de teléfono asociado a telegram indicando código de país y área",                
                 "class": "form-control"
             })
         }
