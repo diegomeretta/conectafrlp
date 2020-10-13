@@ -87,11 +87,15 @@ def create_contact(request):
             contact = form.save(commit=False)
             contact.save()
 
-            return redirect('/')
+            return redirect('/getcontacts')
         else:
             form = CreateContactForm()
 
-        return render(request, 'create-contact.html', {'form':form})
+        return render(request, 'create-contact.html', { 'form' : form })
     elif request.method == "GET":
         form = CreateContactForm(request.POST or None)
-        return render(request, "create-contact.html", { 'form' : form})
+        return render(request, "create-contact.html", { 'form' : form })
+
+@login_required(login_url="/login/")
+def get_contacts(request):
+    return render(request, "get-contacts.html", {'contacts' : Contact.objects.all() })

@@ -5,21 +5,6 @@ class Usuario(models.Model):
     api_id = models.CharField(max_length=32)
     api_hash = models.CharField(max_length=32)
 
-class Contact(models.Model):
-    # Fields
-    first_name = models.CharField(max_length=50)
-    last_name = models.CharField(max_length=50)
-    name = models.CharField(max_length=100, primary_key=True)
-    email = models.EmailField
-
-    # Metadata
-    class Meta:
-        ordering = ['first_name', 'last_name', 'name'] 
-
-    # Methods
-    def __str__(self):
-        return self.name
-
 class Rol(models.Model):
     # Fields
     id = models.AutoField(primary_key=True)
@@ -32,12 +17,23 @@ class Rol(models.Model):
 
     # Methods
     def __str__(self):
-        return self.name
+        return self.description
 
-class ContactRol(models.Model):
+class Contact(models.Model):
     # Fields
-    contact_name = models.ForeignKey(Contact, on_delete=models.CASCADE)
-    rol_id = models.ForeignKey(Rol, on_delete=models.CASCADE)
+    first_name = models.CharField(max_length=50)
+    last_name = models.CharField(max_length=50)
+    name = models.CharField(max_length=100, primary_key=True)
+    email = models.EmailField
+    contact_rol = models.ForeignKey(Rol, on_delete=models.CASCADE, default=2)
+
+    # Metadata
+    class Meta:
+        ordering = ['first_name', 'last_name'] 
+
+    # Methods
+    def __str__(self):
+        return self.name
 
 class Group(models.Model):
     # Fields

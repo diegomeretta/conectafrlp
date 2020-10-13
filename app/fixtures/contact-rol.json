@@ -4,7 +4,7 @@
       "pk": 1,
       "fields": {
         "name": "Profesor",
-        "description": "Profesor a cargo de la catedra"
+        "description": "Profesor"
       }
     },
     {

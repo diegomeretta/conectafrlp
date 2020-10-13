@@ -1,4 +1,4 @@
-from django.forms import ModelForm, TextInput
+from django.forms import ModelForm, TextInput, Select
 from .models import Usuario, Group, Contact
 
 class AltaUsuarioForm(ModelForm):
@@ -43,5 +43,10 @@ class CreateContactForm(ModelForm):
             'last_name': TextInput(attrs={
                 "placeholder" : "Apellido",
                 "class": "form-control"
+            }),
+            'contact_rol': Select(attrs={
+                "placeholder" : "ses",
+                "class": "form-control"
             })
         }
+

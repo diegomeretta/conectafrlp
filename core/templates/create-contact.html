@@ -24,17 +24,20 @@
                                 <div class="card-body">
                                     <form role="form" method="post" action="createcontact">
                                         {% csrf_token %}    
-                                        Nombre del usuario en Telegram
                                         <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="basic-addon1">@</span>
+                                            </div>
                                             {{ form.name }}
                                         </div>
-                                        Nombre
                                         <div class="input-group mb-3">
                                             {{ form.first_name }}
                                         </div>
-                                        Appellido
                                         <div class="input-group mb-3">
                                             {{ form.last_name }}
+                                        </div>
+                                        <div class="input-group mb-3">
+                                            {{ form.contact_rol }}
                                         </div>
                                         <button type="submit" class="btn btn-primary shadow-2 mb-4">Agregar Contacto</button>
                 
