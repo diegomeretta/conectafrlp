@@ -10,7 +10,7 @@ from django.template import loader
 from django.http import HttpResponse
 from django import template
 from .forms import AltaUsuarioForm, AltaGrupoForm, CreateContactForm
-from .models import Group, Usuario, Contact
+from .models import Group, Usuario, Contact, Rol
 from os import system
 
 
@@ -102,4 +102,9 @@ def create_contact(request):
 
 @login_required(login_url="/login/")
 def get_contacts(request):
-    return render(request, "get-contacts.html", {'contacts' : Contact.objects.all() })
+    contactos = Contact.objects.all()
+    for c in contactos:
+        rol = Rol.objects.filter(id=c.contact_rol_id).first()
+        print(rol)
+        c.rol = rol.description
+    return render(request, "get-contacts.html", {'contacts' : contactos })
