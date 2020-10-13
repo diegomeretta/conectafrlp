@@ -14,7 +14,7 @@ sqlparse = "*"
 dj-database-url = "*"
 gunicorn = "*"
 whitenoise = "*"
-Django = "==3.1.*"
+Django = "==2.2.*"
 Unipath = "*"
 Pyrogram = "*"
 
