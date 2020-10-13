@@ -1,0 +1,18 @@
+[
+    {
+      "model": "app.Rol",
+      "pk": 1,
+      "fields": {
+        "name": "Profesor",
+        "description": "Profesor"
+      }
+    },
+    {
+      "model": "app.Rol",
+      "pk": 2,
+      "fields": {
+        "name": "Student",
+        "description": "Alumno"
+      }
+    }
+]

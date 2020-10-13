@@ -1,5 +1,5 @@
-from django.forms import ModelForm, TextInput
-from .models import Usuario, Group
+from django.forms import ModelForm, TextInput, Select
+from .models import Usuario, Group, Contact
 
 class AltaUsuarioForm(ModelForm):
     class Meta:
@@ -30,3 +30,27 @@ class AltaGrupoForm(ModelForm):
                 "class": "form-control"
             })
         }
+
+class CreateContactForm(ModelForm):
+    class Meta:
+        model = Contact
+        fields = "__all__"
+        widgets = {
+            'name': TextInput(attrs={
+                "placeholder" : "Nombre de Usurario de Telegram",
+                "class": "form-control"
+            }),
+            'first_name': TextInput(attrs={
+                "placeholder" : "Nombre",
+                "class": "form-control"
+            }),
+            'last_name': TextInput(attrs={
+                "placeholder" : "Apellido",
+                "class": "form-control"
+            }),
+            'contact_rol': Select(attrs={
+                "placeholder" : "ses",
+                "class": "form-control"
+            })
+        }
+

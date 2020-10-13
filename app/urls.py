@@ -17,5 +17,7 @@ urlpatterns = [
     path('', views.index, name='home'),
     path('home', views.home, name='index'),
     path('solicitarkeys', views.solicitar_keys, name='solicitarkeys'),
-    path('creategroup', views.create_group, name='creategroup')
+    path('creategroup', views.create_group, name='creategroup'),
+    path('createcontact', views.create_contact, name='createcontact'),
+    path('getcontacts', views.get_contacts, name='getcontacts'),
 ]
