@@ -1,11 +1,9 @@
 from pyrogram import Client
 
-api_id = 1404989
-api_hash = "c266364dfa4c11850ff7cd9e6219edcb"
+api_id = arg[0]
+api_hash = arg[1]
+chat_id = arg[2]
 
 with Client("my_account", api_id, api_hash) as app:
-    # link = app.export_chat_invite_link(-325948556)
-    f = app.send_message(-325948556, "Hola Como estan compañeros de Proyecto?")
-    # f = app.promote_chat_member(-325948556, 314956884)
-    #app.delete_channel(-325948556)
+    f = app.send_message(chat_id, "Hola")
     print(f)
