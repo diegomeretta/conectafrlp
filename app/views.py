@@ -10,7 +10,7 @@ from django.template import loader
 from django.http import HttpResponse
 from django import template
 from .forms import AltaUsuarioForm, AltaGrupoForm, CreateContactForm
-from .models import Usuario, Contact
+from .models import Group, Usuario, Contact
 from os import system
 
 
@@ -78,6 +78,10 @@ def create_group(request):
     elif request.method == "GET":
         form = AltaGrupoForm(request.POST or None)
         return render(request, "create_group.html", { 'form' : form})
+
+@login_required(login_url="/login/")
+def get_groups(request):
+    return render(request, "get-groups.html", {'groups' : Group.objects.all() })
 
 @login_required(login_url="/login/")
 def create_contact(request):
