@@ -105,6 +105,5 @@ def get_contacts(request):
     contactos = Contact.objects.all()
     for c in contactos:
         rol = Rol.objects.filter(id=c.contact_rol_id).first()
-        print(rol)
-        c.rol = rol.description
+        c.rol_description = rol.description
     return render(request, "get-contacts.html", {'contacts' : contactos })
