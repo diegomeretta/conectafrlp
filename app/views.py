@@ -15,16 +15,16 @@ from os import system
 
 
 @login_required(login_url="/login/")
-def index(request):
-
+def home(request):
     usuarios = Usuario.objects.filter(username=request.user.username)
     if usuarios.first():
-        return render(request, "index.html")
+        return render(request, "home.html")
     else:
         form = AltaUsuarioForm(request.POST or None)
         return render(request, "solicitar_keys.html", { 'form' : form})
 
-def home(request):
+@login_required(login_url="/login/")
+def index(request):
     return render(request, "index.html")
 
 @login_required(login_url="/login/")
@@ -107,4 +107,5 @@ def get_contacts(request):
         rol = Rol.objects.filter(id=c.contact_rol_id).first()
         print(rol)
         c.rol = rol.description
+    
     return render(request, "get-contacts.html", {'contacts' : contactos })
