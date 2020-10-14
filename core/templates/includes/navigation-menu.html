@@ -1,4 +1,4 @@
-
+{% load menu %}
     <nav class="pcoded-navbar">
         <div class="navbar-wrapper">
             <div class="navbar-brand header-logo">
@@ -12,36 +12,44 @@
             </div>
             <div class="navbar-content scroll-div">
                 <ul class="nav pcoded-inner-navbar">
-                    <li data-username="home page" class="nav-item active">
+                    <li data-username="home page" class="nav-item">
                         <a href="/" class="nav-link "><span class="pcoded-micon">
                             <i class="feather icon-home"></i></span><span class="pcoded-mtext">Home</span>
                         </a>
                     </li>
-                    <li data-username="Disabled Menu" class="nav-item">
-                        <a href="creategroup" class="nav-link">
+                    <li class="{% active 'getgroups' %}" class="nav-item">
+                        <a href="getgroups" class="nav-link">
                             <span class="pcoded-micon">
                                 <i class="feather icon-users"></i>
+                            </span>
+                            <span class="pcoded-mtext">Grupos</span>
+                        </a>
+                    </li>
+                    <li class="{% active 'creategroup' %}" class="nav-item">
+                        <a href="creategroup" class="nav-link">
+                            <span class="pcoded-micon">
+                                <i class="feather icon-users"></i>+
                             </span>
                             <span class="pcoded-mtext">Crear grupo</span>
                         </a>
                     </li>
-                    <li data-username="Disabled Menu" class="nav-item">
+                    <li class="{% active 'getcontacts' %}" class="nav-item">
                         <a href="getcontacts" class="nav-link">
                             <span class="pcoded-micon">
-                                <i class="feather icon-users"></i>
+                                <i class="feather icon-user"></i>
                             </span>
                             <span class="pcoded-mtext">Contactos</span>
                         </a>
                     </li>
-                    <li data-username="Disabled Menu" class="nav-item">
+                    <li class="{% active 'createcontact' %}" class="nav-item">
                         <a href="createcontact" class="nav-link">
                             <span class="pcoded-micon">
                                 <i class="feather icon-user-plus"></i>
                             </span>
-                            <span class="pcoded-mtext">Agregar Contacto</span>
+                            <span class="pcoded-mtext">Crear Contacto</span>
                         </a>
                     </li>
-                    <li data-username="Disabled Menu" class="nav-item">
+                    <li class="nav-item">
                         <a href={% url 'logout' %} class="nav-link">
                             <span class="pcoded-micon">
                                 <i class="feather icon-power"></i>
