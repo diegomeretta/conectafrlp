@@ -37,7 +37,7 @@ class CreateContactForm(ModelForm):
         fields = "__all__"
         widgets = {
             'name': TextInput(attrs={
-                "placeholder" : "Nombre de Usurario de Telegram",
+                "placeholder" : "Nombre de Usuario de Telegram",
                 "class": "form-control"
             }),
             'first_name': TextInput(attrs={
