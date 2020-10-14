@@ -10,21 +10,21 @@ from django.template import loader
 from django.http import HttpResponse
 from django import template
 from .forms import AltaUsuarioForm, AltaGrupoForm, CreateContactForm
-from .models import Usuario, Contact
+from .models import Group, Usuario, Contact, Rol
 from os import system
 
 
 @login_required(login_url="/login/")
-def index(request):
-
+def home(request):
     usuarios = Usuario.objects.filter(username=request.user.username)
     if usuarios.first():
-        return render(request, "index.html")
+        return render(request, "home.html")
     else:
         form = AltaUsuarioForm(request.POST or None)
         return render(request, "solicitar_keys.html", { 'form' : form})
 
-def home(request):
+@login_required(login_url="/login/")
+def index(request):
     return render(request, "index.html")
 
 @login_required(login_url="/login/")
@@ -80,6 +80,10 @@ def create_group(request):
         return render(request, "create_group.html", { 'form' : form})
 
 @login_required(login_url="/login/")
+def get_groups(request):
+    return render(request, "get-groups.html", {'groups' : Group.objects.all() })
+
+@login_required(login_url="/login/")
 def create_contact(request):
     if request.method == "POST":
         form = CreateContactForm(request.POST)
@@ -98,4 +102,10 @@ def create_contact(request):
 
 @login_required(login_url="/login/")
 def get_contacts(request):
-    return render(request, "get-contacts.html", {'contacts' : Contact.objects.all() })
+    contactos = Contact.objects.all()
+    for c in contactos:
+        rol = Rol.objects.filter(id=c.contact_rol_id).first()
+        print(rol)
+        c.rol = rol.description
+    
+    return render(request, "get-contacts.html", {'contacts' : contactos })
