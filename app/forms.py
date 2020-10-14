@@ -23,10 +23,23 @@ class AltaUsuarioForm(ModelForm):
 class AltaGrupoForm(ModelForm):
     class Meta:
         model = Group
-        fields = "__all__"
+        fields = ["name", "career", "comision"]
+        career_choices = (
+            (1, 'Ingeniería en sistemas de información'),
+            (2, 'Ingeniería mecánica'),
+            (3, 'Ingeniería eléctrica'),
+            (4, 'Ingeniería industrial'),
+            (5, 'Ingeniería química'),
+            (6, 'Ingeniería civil')
+        )
         widgets = {
             'name': TextInput(attrs={
-                "placeholder" : "Nombre del grupo",                
+                "placeholder" : "",                
+                "class": "form-control"
+            }),
+            'career': Select(choices=career_choices, attrs={'class': 'form-control'}),
+            'comision': TextInput(attrs={
+                "placeholder" : "",                
                 "class": "form-control"
             })
         }

@@ -1,4 +1,5 @@
 from django.db import models
+import datetime
 
 class Usuario(models.Model):
     username = models.CharField(max_length=32)
@@ -40,11 +41,6 @@ class Group(models.Model):
     # Fields
     name = models.CharField(max_length=32)
     contacts = models.ManyToManyField(Contact)
-
-    # Metadata
-    class Meta:
-        ordering = ['name'] 
-
-     # Methods
-    def __str__(self):
-        return self.name
+    career = models.IntegerField()
+    comision = models.CharField(max_length=32, default="")
+    current_year = models.IntegerField(default=datetime.datetime.now().year)
