@@ -1,0 +1,39 @@
+[
+    {
+      "model": "app.Career",
+      "pk": 1,
+      "fields": {
+        "name": "Ingeniería en sistemas de información"
+      }
+    },{
+      "model": "app.Career",
+      "pk": 2,
+      "fields": {
+        "name": "Ingeniería mecánica"
+      }
+    },{
+      "model": "app.Career",
+      "pk": 3,
+      "fields": {
+        "name": "Ingeniería eléctrica"
+      }
+    },{
+      "model": "app.Career",
+      "pk": 4,
+      "fields": {
+        "name": "Ingeniería industrial"
+      }
+    },{
+      "model": "app.Career",
+      "pk": 5,
+      "fields": {
+        "name": "Ingeniería química"
+      }
+    },{
+      "model": "app.Career",
+      "pk": 6,
+      "fields": {
+        "name": "Ingeniería civil"
+      }
+    }
+]
