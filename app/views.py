@@ -13,19 +13,14 @@ from .forms import AltaUsuarioForm, AltaGrupoForm, CreateContactForm
 from .models import Group, Usuario, Contact, Rol
 from os import system
 
-
 @login_required(login_url="/login/")
-def home(request):
+def index(request):
     usuarios = Usuario.objects.filter(username=request.user.username)
     if usuarios.first():
-        return render(request, "home.html")
+        return render(request, "index.html")
     else:
         form = AltaUsuarioForm(request.POST or None)
         return render(request, "solicitar_keys.html", { 'form' : form})
-
-@login_required(login_url="/login/")
-def index(request):
-    return render(request, "index.html")
 
 @login_required(login_url="/login/")
 def pages(request):

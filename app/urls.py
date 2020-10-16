@@ -15,7 +15,6 @@ urlpatterns = [
 
     # The home page
     path('', views.index, name='index'),
-    path('home', views.home, name='home'),
     path('solicitarkeys', views.solicitar_keys, name='solicitarkeys'),
     path('creategroup', views.create_group, name='creategroup'),
     path('getgroups', views.get_groups, name='getgroups'),
