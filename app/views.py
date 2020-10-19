@@ -9,14 +9,16 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.template import loader
 from django.http import HttpResponse
 from django import template
-from .forms import AltaUsuarioForm, AltaGrupoForm, CreateContactForm
+from .forms import AltaUsuarioForm, AltaGrupoForm, CreateContactForm, SendMessageForm
 from .models import Group, Usuario, Contact, Rol
 from os import system
+import os
 
 @login_required(login_url="/login/")
 def index(request):
     usuarios = Usuario.objects.filter(username=request.user.username)
-    if usuarios.first():
+    usuario = usuarios.first()
+    if usuario:
         return render(request, "index.html")
     else:
         form = AltaUsuarioForm(request.POST or None)
@@ -103,3 +105,27 @@ def get_contacts(request):
         c.rol_description = rol.description
     
     return render(request, "get-contacts.html", {'contacts' : contactos })
+
+@login_required(login_url="/login/")
+def send_message(request):
+
+    if request.method == "POST":
+        form = SendMessageForm(request.POST)
+        if form.is_valid():
+            usuarios = Usuario.objects.filter(username=request.user.username)
+            usuario = usuarios.first()
+            texto = request.POST.get('text_message')
+            grupo = request.POST.get('id_group')
+            mensaje = texto.replace(" ", "_")
+            comando = "python mensaje.py " + usuario.api_id + " " + usuario.api_hash + " " + str(grupo) + " " + mensaje
+            print(comando)
+            respuesta = os.system(comando)
+
+            return redirect('/sendmessage')
+        else:
+            form = SendMessageForm()
+
+        return render(request, "send-message.html", { 'form' : form })
+    elif request.method == "GET":
+        form = SendMessageForm(request.POST or None)
+        return render(request, "send-message.html", { 'form' : form })

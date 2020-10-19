@@ -20,4 +20,5 @@ urlpatterns = [
     path('getgroups', views.get_groups, name='getgroups'),
     path('createcontact', views.create_contact, name='createcontact'),
     path('getcontacts', views.get_contacts, name='getcontacts'),
+    path('sendmessage', views.send_message, name='sendmessage'),
 ]
