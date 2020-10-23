@@ -1,5 +1,5 @@
 from django.forms import ModelForm, TextInput, Select
-from .models import Usuario, Group, Contact
+from .models import Usuario, Group, Contact, Message
 
 class AltaUsuarioForm(ModelForm):
     class Meta:
@@ -65,3 +65,17 @@ class CreateContactForm(ModelForm):
             })
         }
 
+class SendMessageForm(ModelForm):
+    class Meta:
+        model = Message
+        fields = ["text_message", "id_group"]
+        widgets = {
+            'text_message': TextInput(attrs={
+                "placeholder" : "Mensaje",
+                "class": "form-control"
+            }),
+            'id_group': TextInput(attrs={
+                "placeholder" : "id_grupo",
+                "class": "form-control"
+            })
+        }

@@ -52,3 +52,8 @@ class Group(models.Model):
     comision = models.CharField(max_length=32, default="")
     subject = models.CharField(max_length=50, default="")
     current_year = models.IntegerField(default=datetime.datetime.now().year)
+
+class Message(models.Model):
+    text_message = models.CharField(max_length=32)
+    id_group = models.CharField(max_length=32)
+
