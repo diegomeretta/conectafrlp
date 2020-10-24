@@ -36,7 +36,7 @@ class AltaGrupoForm(ModelForm):
                 "placeholder" : "",                
                 "class": "form-control"
             }),
-            'subject': TextInput(attrs={
+            'subject': Select(attrs={
                 "placeholder" : "",                
                 "class": "form-control"
             })
