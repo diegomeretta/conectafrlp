@@ -88,7 +88,7 @@ def create_contact(request):
             contact = form.save(commit=False)
             contact.save()
 
-            return redirect('/getcontacts')
+            return redirect('/nuevocontacto')
         else:
             form = CreateContactForm()
 
