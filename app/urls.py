@@ -16,9 +16,9 @@ urlpatterns = [
     # The home page
     path('', views.index, name='index'),
     path('solicitarkeys', views.solicitar_keys, name='solicitarkeys'),
-    path('creategroup', views.create_group, name='creategroup'),
-    path('getgroups', views.get_groups, name='getgroups'),
-    path('createcontact', views.create_contact, name='createcontact'),
-    path('getcontacts', views.get_contacts, name='getcontacts'),
+    path('nuevogrupo', views.create_group, name='nuevogrupo'),
+    path('grupos', views.get_groups, name='grupos'),
+    path('nuevocontacto', views.create_contact, name='nuevocontacto'),
+    path('contactos', views.get_contacts, name='contactos'),
     path('sendmessage', views.send_message, name='sendmessage'),
 ]
