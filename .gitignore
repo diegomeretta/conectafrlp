@@ -26,3 +26,6 @@ app/migrations/*
 
 staticfiles/*
 !staticfiles/.gitkeep 
+
+*.session
+*.txt
