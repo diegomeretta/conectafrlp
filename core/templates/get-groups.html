@@ -32,7 +32,15 @@
                                         <tbody>
                                         {% for group in groups %}                                        
                                             <tr>
-                                                <th>{{group.name}}</th>
+                                                <th>
+                                                    {{group.name}}
+                                                    <a href="#" class="float-right">
+                                                        <i class="feather icon-trash-2"></i>
+                                                    </a>
+                                                    <a href="/grupos/{{group.id}}" class="float-right">
+                                                        <i class="feather icon-edit"></i>
+                                                    </a>
+                                                </th>
                                             </tr>
                                         {% endfor %}
                                         </tbody>
