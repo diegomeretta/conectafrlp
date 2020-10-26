@@ -4,18 +4,22 @@ from .models import Usuario, Group, Contact, Message
 class AltaUsuarioForm(ModelForm):
     class Meta:
         model = Usuario
-        fields = ["api_id", "api_hash", "phone"]
+        fields = ["api_id", "api_hash", "phone", "telegram_id"]
         widgets = {
             'api_id': TextInput(attrs={
-                "placeholder" : "API_ID de Telegram",                
+                "placeholder" : "API_ID de Telegram",
                 "class": "form-control"
             }),
             'api_hash': TextInput(attrs={
-                "placeholder" : "API_HASH de Telegram",                
+                "placeholder" : "API_HASH de Telegram",
                 "class": "form-control"
             }),
             'phone': TextInput(attrs={
-                "placeholder" : "Número de teléfono asociado a telegram indicando código de país y área",                
+                "placeholder" : "Número de teléfono asociado a telegram indicando código de país y área",
+                "class": "form-control"
+            }),
+            'telegram_id': TextInput(attrs={
+                "placeholder" : "ID de Telegram del usuario",
                 "class": "form-control"
             })
         }
@@ -26,18 +30,18 @@ class AltaGrupoForm(ModelForm):
         fields = ["name", "career", "comision", "subject"]
         widgets = {
             'name': TextInput(attrs={
-                "placeholder" : "",                
+                "placeholder" : "",
                 "class": "form-control"
             }),
             'career': Select(attrs={
                 "class": "form-control"
             }),
             'comision': TextInput(attrs={
-                "placeholder" : "",                
+                "placeholder" : "",
                 "class": "form-control"
             }),
             'subject': Select(attrs={
-                "placeholder" : "",                
+                "placeholder" : "",
                 "class": "form-control"
             })
         }
