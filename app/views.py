@@ -81,6 +81,11 @@ def get_groups(request):
     return render(request, "get-groups.html", {'groups' : Group.objects.all() })
 
 @login_required(login_url="/login/")
+def get_group(request, id):
+    print(id)
+    return render(request, "get-group.html", {'group' : Group.objects.get(id=id)})
+
+@login_required(login_url="/login/")
 def create_contact(request):
     if request.method == "POST":
         form = CreateContactForm(request.POST)
@@ -88,7 +93,7 @@ def create_contact(request):
             contact = form.save(commit=False)
             contact.save()
 
-            return redirect('/getcontacts')
+            return redirect('/nuevocontacto')
         else:
             form = CreateContactForm()
 
