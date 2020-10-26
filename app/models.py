@@ -6,7 +6,7 @@ class Usuario(models.Model):
     api_id = models.CharField(max_length=32)
     api_hash = models.CharField(max_length=32)
     phone = models.CharField(max_length=32)
-    telegram_id = models.CharField(max_length=32)
+    telegram_id = models.CharField(max_length=32, default="")
 
 class Rol(models.Model):
     # Fields

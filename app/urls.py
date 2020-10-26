@@ -21,5 +21,5 @@ urlpatterns = [
     path('grupos/<int:id>', views.get_group, name='grupo'),
     path('nuevocontacto', views.create_contact, name='nuevocontacto'),
     path('contactos', views.get_contacts, name='contactos'),
-    path('sendmessage', views.send_message, name='sendmessage'),
+    path('enviarmensaje', views.send_message, name='enviarmensaje'),
 ]
