@@ -6,7 +6,7 @@ class Usuario(models.Model):
     api_id = models.CharField(max_length=32)
     api_hash = models.CharField(max_length=32)
     phone = models.CharField(max_length=32)
-    telegram_id = models.CharField(max_length=32)
+    telegram_id = models.CharField(max_length=32, default="")
 
 class Rol(models.Model):
     # Fields
@@ -60,6 +60,7 @@ class Group(models.Model):
     comision = models.CharField(max_length=32, default="")
     subject = models.ForeignKey(Subject, on_delete=models.CASCADE)
     current_year = models.IntegerField(default=datetime.datetime.now().year)
+    telegram_id = models.CharField(max_length=32, default="")
 
 class Message(models.Model):
     text_message = models.CharField(max_length=32)
