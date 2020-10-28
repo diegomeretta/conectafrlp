@@ -21,12 +21,29 @@
                                 <h5>{{group.name}}</h5>
                             </div>
                             <div class="card-block table-border-style">
-                                <ul class="list-group">
-                                    <li class="list-group-item">{{group.career}}</li>
-                                    <li class="list-group-item">{{group.subject}}</li>
-                                    <li class="list-group-item">{{group.comision}}</li>
-                                    <li class="list-group-item">{{group.current_year}} ac</li>
-                                  </ul>
+                                <form>
+                                    <div class="form-group">
+                                        <label for="inputCareer">Carrera</label>
+                                        <input type="text" class="form-control" id="inputCareer" placeholder="{{group.career}}">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputSubject">Materia</label>
+                                        <input type="text" class="form-control" id="inputSubject" placeholder="{{group.subject}}">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputComision">Comisión</label>
+                                        <input type="text" class="form-control" id="inputComision" placeholder="{{group.comision}}">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputCurrentYear">Año</label>
+                                        <input type="text" class="form-control" id="inputCurrentYear" placeholder="{{group.current_year}}">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputContactList">Integrantes</label>
+                                        <input type="text" class="form-control" id="inputContactList" placeholder="Lista de integrantes para los grupos">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Actualizar</button>
+                                </form>
                             </div>
                         </div>
                     </div>
