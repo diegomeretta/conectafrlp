@@ -69,6 +69,25 @@ class CreateContactForm(ModelForm):
             })
         }
 
+class EditContactForm(ModelForm):
+    class Meta:
+        model = Contact
+        fields = "__all__"
+        widgets = {
+            'first_name': TextInput(attrs={
+                "placeholder" : "Nombre",
+                "class": "form-control"
+            }),
+            'last_name': TextInput(attrs={
+                "placeholder" : "Apellido",
+                "class": "form-control"
+            }),
+            'contact_rol': Select(attrs={
+                "placeholder" : "ses",
+                "class": "form-control"
+            })
+        }
+
 class SendMessageForm(ModelForm):
     class Meta:
         model = Message
