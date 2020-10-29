@@ -90,8 +90,9 @@ def get_groups(request):
 
 @login_required(login_url="/login/")
 def get_group(request, id):
-    print(id)
-    return render(request, "get-group.html", {'group' : Group.objects.get(id=id)})
+    group = Group.objects.get(id=id)
+    contacts = Contact.objects.all()
+    return render(request, "get-group.html", {'group':group, 'contacts':contacts})
 
 @login_required(login_url="/login/")
 def create_contact(request):

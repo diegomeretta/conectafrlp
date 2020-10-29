@@ -1,59 +1,74 @@
 {% extends "layouts/base.html" %}
 
-{% block title %} Crear grupo {% endblock %} 
+{% block title %} Crear grupo {% endblock %}
 
 <!-- Specific CSS goes HERE -->
 {% block stylesheets %}{% endblock stylesheets %}
 
 {% block content %}
 
-    <div class="pcoded-content">
-        <div class="pcoded-inner-content">
-            <!-- [ breadcrumb ] start -->
+<div class="pcoded-content">
+    <div class="pcoded-inner-content">
+        <!-- [ breadcrumb ] start -->
 
-            <!-- [ breadcrumb ] end -->
-            <div class="main-body">
-                <div class="page-wrapper">
-                    <!-- [ Main Content ] start -->
-                    <div class="col-xl-12">
-                        <div class="card">
-                            <div class="card-header">
-                                <h5>{{group.name}}</h5>
-                            </div>
-                            <div class="card-block table-border-style">
-                                <form>
-                                    <div class="form-group">
-                                        <label for="inputCareer">Carrera</label>
-                                        <input type="text" class="form-control" id="inputCareer" placeholder="{{group.career}}">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="inputSubject">Materia</label>
-                                        <input type="text" class="form-control" id="inputSubject" placeholder="{{group.subject}}">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="inputComision">Comisión</label>
-                                        <input type="text" class="form-control" id="inputComision" placeholder="{{group.comision}}">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="inputCurrentYear">Año</label>
-                                        <input type="text" class="form-control" id="inputCurrentYear" placeholder="{{group.current_year}}">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="inputContactList">Integrantes</label>
-                                        <input type="text" class="form-control" id="inputContactList" placeholder="Lista de integrantes para los grupos">
-                                    </div>
-                                    <button type="submit" class="btn btn-primary">Actualizar</button>
-                                </form>
-                            </div>
+        <!-- [ breadcrumb ] end -->
+        <div class="main-body">
+            <div class="page-wrapper">
+                <!-- [ Main Content ] start -->
+                <div class="col-xl-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5>{{group.name}}</h5>
+                        </div>
+                        <div class="card-block table-border-style">
+                            <form>
+                                {% csrf_token %}
+                                <div class="form-group">
+                                    <label for="inputCareer">Carrera</label>
+                                    <input type="text" class="form-control" id="inputCareer"
+                                        placeholder="{{group.career}}">
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputSubject">Materia</label>
+                                    <input type="text" class="form-control" id="inputSubject"
+                                        placeholder="{{group.subject}}">
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputComision">Comisión</label>
+                                    <input type="text" class="form-control" id="inputComision"
+                                        placeholder="{{group.comision}}">
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputCurrentYear">Año</label>
+                                    <input type="text" class="form-control" id="inputCurrentYear"
+                                        placeholder="{{group.current_year}}">
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputContactList">Integrantes</label>
+                                    <select class="form-control" id="inputContactList" multiple="multiple">
+                                        {% for contact in contacts %}
+                                            <option>@{{contact.name}}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn btn-primary shadow-2 mb-4">Actualizar</button>
+                            </form>
                         </div>
                     </div>
-                    <!-- [ Main Content ] end -->
                 </div>
+                <!-- [ Main Content ] end -->
             </div>
         </div>
     </div>
+</div>
 
 {% endblock content %}
 
 <!-- Specific Page JS goes HERE  -->
-{% block javascripts %}{% endblock javascripts %}
+{% block javascripts %}
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#inputContactList').multiselect();
+    });
+</script>
+{% endblock javascripts %}
