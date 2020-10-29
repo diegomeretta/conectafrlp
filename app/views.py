@@ -132,18 +132,14 @@ def get_contacts(request):
     return render(request, "get-contacts.html", {'page': page, 'contacts' : contacts })
 
 @login_required(login_url="/login/")
-def edit_contact(request, user_name):
-    contact = Contact.objects.get(name=user_name)
-    form = EditContactForm(instance=contact)
-
-    if request.method == 'POST':
-        form = EditContactForm(request.POST, instance=contact)
-        if form.is_valid():
-            form.save()
-            return redirect('/get-contacts')
+def edit_contact(request, name):
+    contact = Contact.objects.get(name=name)
+    if contact==None:
+        return redirect('/error-404.html')
+    else:
+        form = EditContactForm(instance=contact)
+        return render(request, 'edit-contact.html', { 'form': form, 'contact': contact })
  
-    return render(request, 'edit-contact.html', { 'form': form })
-
 @login_required(login_url="/login/")
 def send_message(request):
 

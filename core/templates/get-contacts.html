@@ -41,8 +41,12 @@
                                                 <th>@{{contact.name}}</th>
                                                 <th>{{contact.rol_description}}</th>
                                                 <th>
-                                                    <a href="{% url 'editarcontacto' contact.name %}" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Editar">&#xE254;</i></a>
-                                                    <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Borrar">&#xE872;</i></a>
+                                                    <a href="/editarcontacto/{{contact.name}}" class="edit" data-toggle="modal">
+                                                        <i class="material-icons" data-toggle="tooltip" title="Editar">&#xE254;</i>
+                                                    </a>
+                                                    <a href="#deleteEmployeeModal" class="delete" data-toggle="modal">
+                                                        <i class="material-icons" data-toggle="tooltip" title="Borrar">&#xE872;</i>
+                                                    </a>
                                                 </th>
                                             </tr>
                                         {% endfor %}

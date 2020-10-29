@@ -75,15 +75,12 @@ class EditContactForm(ModelForm):
         fields = "__all__"
         widgets = {
             'first_name': TextInput(attrs={
-                "placeholder" : "Nombre",
                 "class": "form-control"
             }),
             'last_name': TextInput(attrs={
-                "placeholder" : "Apellido",
                 "class": "form-control"
             }),
             'contact_rol': Select(attrs={
-                "placeholder" : "ses",
                 "class": "form-control"
             })
         }
