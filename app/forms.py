@@ -72,7 +72,7 @@ class CreateContactForm(ModelForm):
 class EditContactForm(ModelForm):
     class Meta:
         model = Contact
-        fields = "__all__"
+        fields = ["first_name", "last_name", "contact_rol"]
         widgets = {
             'first_name': TextInput(attrs={
                 "class": "form-control"

@@ -22,7 +22,7 @@
                                     <h5>Editar Contacto: @{{contact.name}}</h5>
                                 </div>
                                 <div class="card-body">
-                                    <form role="form" method="post" action="editarcontacto">
+                                    <form role="form" method="post" action="">
                                         {% csrf_token %}    
                                         <div class="input-group mb-3">
                                             {{ form.first_name }}

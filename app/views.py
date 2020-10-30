@@ -136,6 +136,13 @@ def edit_contact(request, name):
     contact = Contact.objects.get(name=name)
     if contact==None:
         return redirect('/error-404.html')
+    elif request.method == "POST":
+        form = EditContactForm(request.POST, instance=contact)
+        if form.is_valid():
+            contact = form.save()
+            contact.save()
+
+            return redirect('/contactos')
     else:
         form = EditContactForm(instance=contact)
         return render(request, 'edit-contact.html', { 'form': form, 'contact': contact })
