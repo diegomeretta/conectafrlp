@@ -79,10 +79,10 @@ def create_group(request):
         else:
             form = AltaGrupoForm()
 
-        return render(request, 'create_group.html', {'form':form})
+        return render(request, 'create-group.html', {'form':form})
     elif request.method == "GET":
         form = AltaGrupoForm(request.POST or None)
-        return render(request, "create_group.html", { 'form' : form})
+        return render(request, "create-group.html", { 'form' : form})
 
 @login_required(login_url="/login/")
 def get_groups(request):
