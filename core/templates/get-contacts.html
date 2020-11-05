@@ -30,6 +30,7 @@
                                                 <th>Apellido</th>
                                                 <th>Usuario Telegram</th>
                                                 <th>Rol</th>
+                                                <th>Acciones</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -39,11 +40,20 @@
                                                 <th>{{contact.last_name}}</th>
                                                 <th>@{{contact.name}}</th>
                                                 <th>{{contact.rol_description}}</th>
+                                                <th>
+                                                    <a href="editarcontacto/{{contact.name}}">
+                                                        <i class="material-icons" data-toggle="tooltip" title="Editar">&#xE254;</i>
+                                                    </a>
+                                                    <a href="" class="delete" data-toggle="modal">
+                                                        <i class="material-icons" data-toggle="tooltip" title="Borrar">&#xE872;</i>
+                                                    </a>
+                                                </th>
                                             </tr>
                                         {% endfor %}
                                         </tbody>
                                     </table>
                                 </div>
+                                {%	include	"pagination.html"	with	page=contacts	%}
                             </div>
                         </div>
                     </div>
@@ -52,7 +62,6 @@
             </div>
         </div>
     </div>
-
 {% endblock content %}
 
 <!-- Specific Page JS goes HERE  -->

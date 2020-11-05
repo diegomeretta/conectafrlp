@@ -5,11 +5,12 @@ Copyright (c) 2019 - present AppSeed.us
 """
 
 from django.contrib.auth.decorators import login_required
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.shortcuts import render, get_object_or_404, redirect
 from django.template import loader
 from django.http import HttpResponse
 from django import template
-from .forms import AltaUsuarioForm, AltaGrupoForm, CreateContactForm, SendMessageForm
+from .forms import AltaUsuarioForm, AltaGrupoForm, CreateContactForm, SendMessageForm, EditContactForm
 from .models import Group, Usuario, Contact, Rol
 from os import system
 import os
@@ -102,7 +103,7 @@ def create_contact(request):
             contact = form.save(commit=False)
             contact.save()
 
-            return redirect('/nuevocontacto')
+            return redirect('/contactos')
         else:
             form = CreateContactForm()
 
@@ -117,9 +118,36 @@ def get_contacts(request):
     for c in contactos:
         rol = Rol.objects.filter(id=c.contact_rol_id).first()
         c.rol_description = rol.description
-    
-    return render(request, "get-contacts.html", {'contacts' : contactos })
 
+    paginator = Paginator(contactos, 2)
+    page = request.GET.get('page')
+
+    try:
+        contacts = paginator.page(page)
+    except PageNotAnInteger:
+        contacts = paginator.page(1)
+ 
+    except EmptyPage:
+        contacts = paginator.page(paginator.num_pages)
+
+    return render(request, "get-contacts.html", {'page': page, 'contacts' : contacts })
+
+@login_required(login_url="/login/")
+def edit_contact(request, name):
+    contact = Contact.objects.get(name=name)
+    if contact==None:
+        return redirect('/error-404.html')
+    elif request.method == "POST":
+        form = EditContactForm(request.POST, instance=contact)
+        if form.is_valid():
+            contact = form.save()
+            contact.save()
+
+            return redirect('/contactos')
+    else:
+        form = EditContactForm(instance=contact)
+        return render(request, 'edit-contact.html', { 'form': form, 'contact': contact })
+ 
 @login_required(login_url="/login/")
 def send_message(request):
 
