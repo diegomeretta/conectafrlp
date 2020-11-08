@@ -151,11 +151,12 @@ def edit_contact(request, name):
 @login_required(login_url="/login/")
 def delete_contact(request, name):
     contact = Contact.objects.get(name=name)
-    
+
     if contact==None:
         return redirect('/error-404.html')
-    
+
     contact.delete()
+
     return redirect('/contactos')
  
 @login_required(login_url="/login/")

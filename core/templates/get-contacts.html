@@ -79,8 +79,8 @@
         $("#delete-contact-model").attr("caller-id", $(this).attr("id"));
     });
 
-    $(document).on('click', '#delete-contact-model', function () {
-        var caller = $("#delete-contact-model").closest(".modal").attr("caller-id");
+    $(document).on('click', '#confirmDeleteButtonModal', function () {
+        var caller = $("#confirmDeleteButtonModal").closest(".modal").attr("caller-id");
         window.location = $("#".concat(caller)).attr("href");
     });
 </script>
