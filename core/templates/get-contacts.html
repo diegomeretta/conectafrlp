@@ -44,7 +44,7 @@
                                                     <a href="editarcontacto/{{contact.name}}">
                                                         <i class="material-icons" data-toggle="tooltip" title="Editar">&#xE254;</i>
                                                     </a>
-                                                    <a href="" class="delete" data-toggle="modal">
+                                                    <a href="eliminarcontacto/{{contact.name}}" class="delete" data-toggle="modal" data-target="#delete-contact-model" data-name="@{{contact.name}}" id="deleteButton{{contact.name}}">
                                                         <i class="material-icons" data-toggle="tooltip" title="Borrar">&#xE872;</i>
                                                     </a>
                                                 </th>
@@ -57,6 +57,7 @@
                             </div>
                         </div>
                     </div>
+                    {% include 'delete-contact-confirmation.html' %}
                     <!-- [ Main Content ] end -->
                 </div>
             </div>
@@ -65,4 +66,22 @@
 {% endblock content %}
 
 <!-- Specific Page JS goes HERE  -->
-{% block javascripts %}{% endblock javascripts %}
+{% block javascripts %}
+<script>
+    $('#delete-contact-model').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget)
+        var recipient = button.data('name')
+        var modal = $(this)
+        modal.find('.modal-title').text("Eliminar contacto " + recipient)
+    });
+
+    $(document).on('click', '.delete', function () {
+        $("#delete-contact-model").attr("caller-id", $(this).attr("id"));
+    });
+
+    $(document).on('click', '#delete-contact-model', function () {
+        var caller = $("#delete-contact-model").closest(".modal").attr("caller-id");
+        window.location = $("#".concat(caller)).attr("href");
+    });
+</script>
+{% endblock javascripts %}
