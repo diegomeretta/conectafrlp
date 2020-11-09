@@ -23,7 +23,8 @@ urlpatterns = [
     path('nuevocontacto', views.create_contact, name='nuevocontacto'),
     path('editarcontacto/<str:name>', views.edit_contact, name='editarcontacto'),
     path('contactos', views.get_contacts, name='contactos'),
-    
+    path('eliminarcontacto/<str:name>', views.delete_contact, name='eliminarcontacto'),
+  
     path('enviarmensaje', views.send_message, name='enviarmensaje'),
 
     path('perfil', views.profile, name='perfil'),
