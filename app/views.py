@@ -182,3 +182,13 @@ def send_message(request):
     elif request.method == "GET":
         form = SendMessageForm(request.POST or None)
         return render(request, "send-message.html", { 'form' : form })
+
+
+@login_required(login_url="/login/")
+def profile(request):
+    usuario = Usuario.objects.filter(username=request.user.username).first()
+    usuario.api_hash = "********************"+usuario.api_hash[20:]
+    if request.method == "GET":
+        return render(request, "profile.html", {'usuario': usuario})
+    elif request.method == "POST":
+        return render(request, "profile.html", {'usuario': usuario})

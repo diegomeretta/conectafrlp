@@ -19,9 +19,13 @@ urlpatterns = [
     path('nuevogrupo', views.create_group, name='nuevogrupo'),
     path('grupos', views.get_groups, name='grupos'),
     path('grupos/<int:id>', views.get_group, name='grupo'),
+    
     path('nuevocontacto', views.create_contact, name='nuevocontacto'),
     path('editarcontacto/<str:name>', views.edit_contact, name='editarcontacto'),
     path('contactos', views.get_contacts, name='contactos'),
-    path('enviarmensaje', views.send_message, name='enviarmensaje'),
     path('eliminarcontacto/<str:name>', views.delete_contact, name='eliminarcontacto'),
+  
+    path('enviarmensaje', views.send_message, name='enviarmensaje'),
+
+    path('perfil', views.profile, name='perfil'),
 ]
