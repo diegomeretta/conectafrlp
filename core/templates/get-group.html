@@ -45,9 +45,9 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="inputContactList">Integrantes</label>
-                                    <select class="form-control" id="inputContactList" multiple="multiple">
+                                    <select class="form-control select2" id="inputContactList" name="members[]" multiple="multiple">
                                         {% for contact in contacts %}
-                                            <option>@{{contact.name}}</option>
+                                        <option>@{{contact}}</option>
                                         {% endfor %}
                                     </select>
                                 </div>
@@ -66,9 +66,4 @@
 
 <!-- Specific Page JS goes HERE  -->
 {% block javascripts %}
-<script type="text/javascript">
-    $(document).ready(function() {
-        $('#inputContactList').multiselect();
-    });
-</script>
 {% endblock javascripts %}
