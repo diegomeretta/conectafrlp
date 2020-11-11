@@ -5,6 +5,7 @@ Copyright (c) 2019 - present AppSeed.us
 """
 
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.shortcuts import render, get_object_or_404, redirect
 from django.template import loader
@@ -102,7 +103,7 @@ def create_contact(request):
         if form.is_valid():
             contact = form.save(commit=False)
             contact.save()
-
+            messages.add_message(request, messages.SUCCESS, "Contacto creado exitosamente.")
             return redirect('/contactos')
         else:
             form = CreateContactForm()
@@ -119,9 +120,9 @@ def get_contacts(request):
         rol = Rol.objects.filter(id=c.contact_rol_id).first()
         c.rol_description = rol.description
 
-    paginator = Paginator(contactos, 2)
+    paginator = Paginator(contactos, 5)
     page = request.GET.get('page')
-
+ 
     try:
         contacts = paginator.page(page)
     except PageNotAnInteger:
@@ -142,7 +143,7 @@ def edit_contact(request, name):
         if form.is_valid():
             contact = form.save()
             contact.save()
-
+            messages.add_message(request, messages.SUCCESS, "Contacto modificado exitosamente.")
             return redirect('/contactos')
     else:
         form = EditContactForm(instance=contact)
@@ -156,7 +157,7 @@ def delete_contact(request, name):
         return redirect('/error-404.html')
 
     contact.delete()
-
+    messages.add_message(request, messages.WARNING, "Contacto eliminado exitosamente.")
     return redirect('/contactos')
  
 @login_required(login_url="/login/")

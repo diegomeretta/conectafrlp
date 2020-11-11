@@ -1,6 +1,6 @@
 {% extends "layouts/base.html" %}
 
-{% block title %} Crear grupo {% endblock %} 
+{% block title %} Contactos {% endblock %} 
 
 <!-- Specific CSS goes HERE -->
 {% block stylesheets %}{% endblock stylesheets %}
@@ -19,35 +19,50 @@
                         <div class="card">
                             <div class="card-header">
                                 <h5>Contactos</h5>
-                                <a class="btn btn-primary" href="nuevocontacto" style="float: right;" data-toggle="tooltip">Agregar Contacto</a>
+                                <div class="btn-toolbar float-right">
+                                    <div class="input-group float-right mx-2">
+                                        <input type="text" class="form-control" id="searchInput" placeholder="Buscar">
+                                    </div>
+                                    <div class="input-group">
+                                        <a class="btn btn-primary" href="nuevocontacto" style="float: right;" data-toggle="tooltip">Agregar</a>                               
+                                    </div>
+                                </div>
                             </div>
+                            {% if messages %}
+                            {% for message in messages %}
+                            <div class="alert alert-{{ message.tags }} alert-dismissible" role="alert" id ="alert">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <strong>{% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}Error{% endif %}</strong> {{ message }}
+                            </div>
+                            {% endfor %}
+                            {% endif %}
                             <div class="card-block table-border-style">
                                 <div class="table-responsive">
                                     <table class="table table-hover">
-                                        <thead>
+                                        <thead class="thead-light">
                                             <tr>
-                                                <th>Nombre</th>
-                                                <th>Apellido</th>
-                                                <th>Usuario Telegram</th>
-                                                <th>Rol</th>
-                                                <th>Acciones</th>
+                                                <th scope="col">Nombre</th>
+                                                <th scope="col">Apellido</th>
+                                                <th scope="col">Usuario Telegram</th>
+                                                <th scope="col">Rol</th>
+                                                <th scope="col">Acciones</th>
                                             </tr>
                                         </thead>
-                                        <tbody>
+                                        <tbody id="myTable">
                                         {% for contact in contacts %}                                        
                                             <tr>
-                                                <th>{{contact.first_name}}</th>
-                                                <th>{{contact.last_name}}</th>
-                                                <th>@{{contact.name}}</th>
-                                                <th>{{contact.rol_description}}</th>
-                                                <th>
+                                                <td>{{contact.first_name}}</td>
+                                                <td>{{contact.last_name}}</td>
+                                                <td>@{{contact.name}}</td>
+                                                <td>{{contact.rol_description}}</td>
+                                                <td>
                                                     <a href="editarcontacto/{{contact.name}}">
                                                         <i class="material-icons" data-toggle="tooltip" title="Editar">&#xE254;</i>
                                                     </a>
                                                     <a href="eliminarcontacto/{{contact.name}}" class="delete" data-toggle="modal" data-target="#delete-contact-model" data-name="@{{contact.name}}" id="deleteButton{{contact.name}}">
                                                         <i class="material-icons" data-toggle="tooltip" title="Borrar">&#xE872;</i>
                                                     </a>
-                                                </th>
+                                                </td>
                                             </tr>
                                         {% endfor %}
                                         </tbody>
@@ -68,6 +83,15 @@
 <!-- Specific Page JS goes HERE  -->
 {% block javascripts %}
 <script>
+    $(document).ready(function(){
+        $("#searchInput").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("#myTable tr").filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+
     $('#delete-contact-model').on('show.bs.modal', function (event) {
         var button = $(event.relatedTarget)
         var recipient = button.data('name')
@@ -83,5 +107,10 @@
         var caller = $("#confirmDeleteButtonModal").closest(".modal").attr("caller-id");
         window.location = $("#".concat(caller)).attr("href");
     });
+
+    $(document).ready( function() {
+        $('#alert').delay(2000).fadeOut();
+    });
 </script>
+
 {% endblock javascripts %}

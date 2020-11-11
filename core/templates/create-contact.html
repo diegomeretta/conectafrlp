@@ -1,6 +1,6 @@
 {% extends "layouts/base.html" %}
 
-{% block title %} Crear grupo {% endblock %} 
+{% block title %} Agregar Contacto {% endblock %} 
 
 <!-- Specific CSS goes HERE -->
 {% block stylesheets %}{% endblock stylesheets %}
@@ -19,7 +19,7 @@
                         <div class="col-md-12 col-xl-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h5>Crear Contacto</h5>
+                                    <h5>Agregar Contacto</h5>
                                 </div>
                                 <div class="card-body">
                                     <form role="form" method="post" action="nuevocontacto">
@@ -39,8 +39,9 @@
                                         <div class="input-group mb-3">
                                             {{ form.contact_rol }}
                                         </div>
-                                        <button type="submit" class="btn btn-primary shadow-2 mb-4">Agregar Contacto</button>
-                
+                                        
+                                        <button type="submit" class="btn btn-primary float-right">Agregar</button>
+                                        <a class="btn btn-secondary float-right" href="/contactos" role="button">Cancelar</a>
                                     </form>
 
                                 </div>
