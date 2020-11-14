@@ -193,3 +193,7 @@ def profile(request):
         return render(request, "profile.html", {'usuario': usuario})
     elif request.method == "POST":
         return render(request, "profile.html", {'usuario': usuario})
+
+@login_required(login_url="/login/")
+def faq(request):
+    return render(request, "faq.html")

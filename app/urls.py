@@ -28,4 +28,6 @@ urlpatterns = [
     path('enviarmensaje', views.send_message, name='enviarmensaje'),
 
     path('perfil', views.profile, name='perfil'),
+
+    path('ayuda', views.faq, name='ayuda'),
 ]
