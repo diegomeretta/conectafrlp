@@ -41,13 +41,23 @@ class Contact(models.Model):
 class Career(models.Model):
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=50)
-
+    
     def __str__(self):
         return self.name
 
 class Subject(models.Model):
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=50)
+    level = models.IntegerField(default=0)
+    career = models.ForeignKey(Career, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.name
+
+class Commission(models.Model):
+    id = models.AutoField(primary_key=True)
+    name = models.CharField(max_length=5)
+    subject = models.ForeignKey(Subject, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name
