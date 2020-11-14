@@ -12,7 +12,7 @@ from django.template import loader
 from django.http import HttpResponse
 from django import template
 from .forms import AltaUsuarioForm, AltaGrupoForm, CreateContactForm, SendMessageForm, EditContactForm
-from .models import Group, Usuario, Contact, Rol
+from .models import Group, Usuario, Contact, Rol, Message
 from os import system
 import os
 
@@ -21,7 +21,12 @@ def index(request):
     usuarios = Usuario.objects.filter(username=request.user.username)
     usuario = usuarios.first()
     if usuario:
-        return render(request, "index.html")
+        return render(request, "index.html",{
+            'username': usuario.username,
+            'groups': Group.objects.all().count(),
+            'users': Contact.objects.all().count(),
+            'messages': Message.objects.all().count()
+            })
     else:
         form = AltaUsuarioForm(request.POST or None)
         return render(request, "solicitar_keys.html", { 'form' : form})
