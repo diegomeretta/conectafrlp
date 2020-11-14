@@ -66,8 +66,8 @@ class Group(models.Model):
     # Fields
     name = models.CharField(max_length=32)
     contacts = models.ManyToManyField(Contact)
-    career = models.ForeignKey(Career, on_delete=models.CASCADE)
-    comision = models.CharField(max_length=32, default="")
+    career = models.ForeignKey(Career, default=0, on_delete=models.CASCADE)
+    commission = models.ForeignKey(Commission, default=0, on_delete=models.CASCADE)
     subject = models.ForeignKey(Subject, on_delete=models.CASCADE)
     current_year = models.IntegerField(default=datetime.datetime.now().year)
     telegram_id = models.CharField(max_length=32, default="")
