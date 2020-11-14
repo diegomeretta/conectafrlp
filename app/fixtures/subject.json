@@ -1,1612 +1,293 @@
 [
-  {
-    "model": "app.Subject",
-    "pk": 1,
-    "fields": {
-      "name": "Accionamientos y Controles Eléctricos (2do.cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 2,
-    "fields": {
-      "name": "Acústica y Vibraciones"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 3,
-    "fields": {
-      "name": "Administración General (Int.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 4,
-    "fields": {
-      "name": "Administración Gerencial (2do.Cuatrimestre )"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 5,
-    "fields": {
-      "name": "Administración de Recursos (int)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 6,
-    "fields": {
-      "name": "Algebra y Geometría Analítica"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 7,
-    "fields": {
-      "name": "Algoritmos y Estructuras de Datos"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 8,
-    "fields": {
-      "name": "Análisis Estructural I"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 9,
-    "fields": {
-      "name": "Análisis Estructural II"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 10,
-    "fields": {
-      "name": "Análisis Matemático I"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 11,
-    "fields": {
-      "name": "Análisis Matemático II"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 12,
-    "fields": {
-      "name": "Análisis Matemático II (1er.cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 13,
-    "fields": {
-      "name": "Análisis Numérico y Cálculo Avanzado"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 14,
-    "fields": {
-      "name": "Análisis de Sistemas (Int.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 15,
-    "fields": {
-      "name": "Aplicaciones en Tiempo Real"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 16,
-    "fields": {
-      "name": "Arquitectura de Computadoras"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 17,
-    "fields": {
-      "name": "Auditoría de Sistemas de Información (1° Cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 18,
-    "fields": {
-      "name": "Automatización Industrial"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 19,
-    "fields": {
-      "name": "Automotores"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 20,
-    "fields": {
-      "name": "Biotecnología"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 21,
-    "fields": {
-      "name": "Centrales y Máquinas Hidráulicas (1° Cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 22,
-    "fields": {
-      "name": "Ciencia de los Materiales"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 23,
-    "fields": {
-      "name": "Cimentaciones (1° Cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 24,
-    "fields": {
-      "name": "Comercialización"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 25,
-    "fields": {
-      "name": "Comercio Exterior"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 26,
-    "fields": {
-      "name": "Comunicaciones (1° Cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 27,
-    "fields": {
-      "name": "Comunicación Profesional ( 1º o 2do Cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 28,
-    "fields": {
-      "name": "Conducción de Grupos(1er.cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 29,
-    "fields": {
-      "name": "Conducción de grupos (1° Cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 30,
-    "fields": {
-      "name": "Construcciones Metálicas y de Madera (2° Cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 31,
-    "fields": {
-      "name": "Control Automático (2do.cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 32,
-    "fields": {
-      "name": "Control Automático de Procesos"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 33,
-    "fields": {
-      "name": "Control Estadísticos de Procesos (2do. Cuatrimestre)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 34,
-    "fields": {
-      "name": "Control de Gestión"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 35,
-    "fields": {
-      "name": "Corrosión Metálica Y Protección"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 36,
-    "fields": {
-      "name": "Costos y Presupuestos"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 37,
-    "fields": {
-      "name": "Cálculo Avanzado"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 38,
-    "fields": {
-      "name": "Cálculo Avanzado (1° Cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 39,
-    "fields": {
-      "name": "Cálculo Numérico (2do.cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 40,
-    "fields": {
-      "name": "Diseño Arquitectónico y Planeamiento II (Anual)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 41,
-    "fields": {
-      "name": "Diseño Arquitectónico, Planeamiento y Urbanismo (Int)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 42,
-    "fields": {
-      "name": "Diseño Estructural(1° Cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 43,
-    "fields": {
-      "name": "Diseño Mecánico"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 44,
-    "fields": {
-      "name": "Diseño Mecánico de Cañerías"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 45,
-    "fields": {
-      "name": "Diseño de Producto"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 46,
-    "fields": {
-      "name": "Diseño de Sistemas (Int.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 47,
-    "fields": {
-      "name": "Economía"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 48,
-    "fields": {
-      "name": "Economía (1er.cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 49,
-    "fields": {
-      "name": "Economía (2° Cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 50,
-    "fields": {
-      "name": "Economía General"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 51,
-    "fields": {
-      "name": "Economía de la Empresa"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 52,
-    "fields": {
-      "name": "Electroquímica Industrial (1er. Cuatrimestre)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 53,
-    "fields": {
-      "name": "Electrotecnia I (2° Cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 54,
-    "fields": {
-      "name": "Electrotecnia II (2do.cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 55,
-    "fields": {
-      "name": "Electrotecnia y Máquinas Eléctricas"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 56,
-    "fields": {
-      "name": "Electrónica Aplicada (2do.cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 57,
-    "fields": {
-      "name": "Electrónica I (1er.cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 58,
-    "fields": {
-      "name": "Electrónica II (1° Cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 59,
-    "fields": {
-      "name": "Electrónica y Sistemas de Control"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 60,
-    "fields": {
-      "name": "Elementos de Máquinas (Integradora)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 61,
-    "fields": {
-      "name": "Elementos de Máquinas y Tecnología Mecánica (1er.cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 62,
-    "fields": {
-      "name": "Emprendedorismo"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 63,
-    "fields": {
-      "name": "Energías Alternativas"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 64,
-    "fields": {
-      "name": "Estabilidad"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 65,
-    "fields": {
-      "name": "Estabilidad I"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 66,
-    "fields": {
-      "name": "Estabilidad II"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 67,
-    "fields": {
-      "name": "Estructuras de Hormigón"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 68,
-    "fields": {
-      "name": "Estudio del Trabajo (Int.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 69,
-    "fields": {
-      "name": "Estática y Resistencia de Materiales"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 70,
-    "fields": {
-      "name": "Evaluación de Proyectos (Int.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 71,
-    "fields": {
-      "name": "Fenómenos de Transporte"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 72,
-    "fields": {
-      "name": "Ferrocarriles (2° Cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 73,
-    "fields": {
-      "name": "Finanzas y Control Empresario"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 74,
-    "fields": {
-      "name": "Fisicoquímica"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 75,
-    "fields": {
-      "name": "Fundamentos de Informática"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 76,
-    "fields": {
-      "name": "Fundamentos de Informática (2° Cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 77,
-    "fields": {
-      "name": "Fundamentos para el Análisis de Señales (2do.cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 78,
-    "fields": {
-      "name": "Física I"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 79,
-    "fields": {
-      "name": "Física II"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 80,
-    "fields": {
-      "name": "Física II (1er.cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 81,
-    "fields": {
-      "name": "Física III"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 82,
-    "fields": {
-      "name": "Física III (1er.cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 83,
-    "fields": {
-      "name": "Generación, transmisión y distribución de la Energía Eléctrica"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 84,
-    "fields": {
-      "name": "Geotecnia (2° Cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 85,
-    "fields": {
-      "name": "Geotopografía (1° Cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 86,
-    "fields": {
-      "name": "Gestión Ambiental"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 87,
-    "fields": {
-      "name": "Gestión Pyme"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 88,
-    "fields": {
-      "name": "Gestión de Datos (2° Cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 89,
-    "fields": {
-      "name": "Hidrología y Obras Hidráulicas"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 90,
-    "fields": {
-      "name": "Hidráulica General y Aplicada"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 91,
-    "fields": {
-      "name": "Impacto Ambiental de Líneas y Centrales Eléctricas (2° Cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 92,
-    "fields": {
-      "name": "Impacto Ambiental en Obras Civiles (1° Cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 93,
-    "fields": {
-      "name": "Informática I"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 94,
-    "fields": {
-      "name": "Informática II"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 95,
-    "fields": {
-      "name": "Ingeniería Ambiental"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 96,
-    "fields": {
-      "name": "Ingeniería Ambiental y Seguridad Industrial"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 97,
-    "fields": {
-      "name": "Ingeniería Civil I (Int)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 98,
-    "fields": {
-      "name": "Ingeniería Mecánica III (Int.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 99,
-    "fields": {
-      "name": "Ingeniería Mecánica II (Int.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 100,
-    "fields": {
-      "name": "Ingeniería Mecánica I (Int.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 101,
-    "fields": {
-      "name": "Ingeniería Y Sociedad"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 102,
-    "fields": {
-      "name": "Ingeniería Y Sociedad (2° Cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 103,
-    "fields": {
-      "name": "Ingeniería de Software"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 104,
-    "fields": {
-      "name": "Ingeniería de las Reacciones Químicas"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 105,
-    "fields": {
-      "name": "Ingeniería de las Reacciones Químicas Avanzadas (1er. Cuat."
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 106,
-    "fields": {
-      "name": "Ingeniería en Calidad"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 107,
-    "fields": {
-      "name": "Ingeniería y Sociedad (1° Cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 108,
-    "fields": {
-      "name": "Ingeniería Civil II (Int)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 109,
-    "fields": {
-      "name": "Ingeniería Legal"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 110,
-    "fields": {
-      "name": "Ingeniería Sanitaria (2° Cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 111,
-    "fields": {
-      "name": "Inglés I"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 112,
-    "fields": {
-      "name": "Inglés II"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 113,
-    "fields": {
-      "name": "Inglés I"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 114,
-    "fields": {
-      "name": "Instalaciones Eléctricas y Acústicas (2° Cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 115,
-    "fields": {
-      "name": "Instalaciones Eléctricas y Luminotecnia (Int.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 116,
-    "fields": {
-      "name": "Instalaciones Industriales"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 117,
-    "fields": {
-      "name": "Instalaciones Sanitarias y de Gas (1° Cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 118,
-    "fields": {
-      "name": "Instalaciones Termomecánicas (2° Cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 119,
-    "fields": {
-      "name": "Instrumentación y Automatización"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 120,
-    "fields": {
-      "name": "Instrumentos y Mediciones Eléctricas (1er.cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 121,
-    "fields": {
-      "name": "Integración Eléctrica I (Int.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 122,
-    "fields": {
-      "name": "Integración Eléctrica II (Int.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 123,
-    "fields": {
-      "name": "Integración I (Int.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 124,
-    "fields": {
-      "name": "Integración II (Int.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 125,
-    "fields": {
-      "name": "Integración III (Int.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 126,
-    "fields": {
-      "name": "Integración IV (Int.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 127,
-    "fields": {
-      "name": "Inteligencia Artificial (1er. Cuatrimestre)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 128,
-    "fields": {
-      "name": "Interworking"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 129,
-    "fields": {
-      "name": "Introducción a la Problemática Ambiental, Saneamiento y Seguridad"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 130,
-    "fields": {
-      "name": "Introducción a los Elementos Finitos"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 131,
-    "fields": {
-      "name": "Investigación Operativa"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 132,
-    "fields": {
-      "name": "Investigación Operativa (1° Cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 133,
-    "fields": {
-      "name": "Legislación"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 134,
-    "fields": {
-      "name": "Legislación (1er. Cuatrimestre)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 135,
-    "fields": {
-      "name": "Legislación (1er.cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 136,
-    "fields": {
-      "name": "Legislación (2do. Cuatrimestre)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 137,
-    "fields": {
-      "name": "Logística"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 138,
-    "fields": {
-      "name": "Manejo de Materiales y Distribución de Planta"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 139,
-    "fields": {
-      "name": "Mantenimiento"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 140,
-    "fields": {
-      "name": "Mantenimiento (1° Cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 141,
-    "fields": {
-      "name": "Mantenimiento de Plantas(1er.cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 142,
-    "fields": {
-      "name": "Maquinas Eléctricas I (Int)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 143,
-    "fields": {
-      "name": "Marco Regulatorio Energético(2do.cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 144,
-    "fields": {
-      "name": "Matemática Discreta"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 145,
-    "fields": {
-      "name": "Matemática Superior (1° Cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 146,
-    "fields": {
-      "name": "Matemática Superior Aplicada (2do. Cuatrimestre)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 147,
-    "fields": {
-      "name": "Materiales Cerámicos (2do. Cuatrimestre)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 148,
-    "fields": {
-      "name": "Materiales Metálicos"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 149,
-    "fields": {
-      "name": "Mecánica - Eléctrica Industrial"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 150,
-    "fields": {
-      "name": "Mecánica Racional"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 151,
-    "fields": {
-      "name": "Mecánica Técnica (1er.cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 152,
-    "fields": {
-      "name": "Mecánica de los Fluídos"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 153,
-    "fields": {
-      "name": "Mecánica y Estadística de Materiales Granulares"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 154,
-    "fields": {
-      "name": "Mecánica y Mecanismos"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 155,
-    "fields": {
-      "name": "Mediciones y Ensayos"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 156,
-    "fields": {
-      "name": "Metodología de la Investigación(2º Cuatr)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 157,
-    "fields": {
-      "name": "Metrología e Ingeniería de la Calidad"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 158,
-    "fields": {
-      "name": "Máquinas Alternativas y Turbomáquinas"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 159,
-    "fields": {
-      "name": "Máquinas Eléctricas II (Int.)(1er.cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 160,
-    "fields": {
-      "name": "Máquinas Térmicas, Hidráulicas y de Fluídos (2do.cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 161,
-    "fields": {
-      "name": "Operaciones Unitarias I"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 162,
-    "fields": {
-      "name": "Operaciones Unitarias II"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 163,
-    "fields": {
-      "name": "Organización Industrial"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 164,
-    "fields": {
-      "name": "Organización y Administración de Empresas (2do.cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 165,
-    "fields": {
-      "name": "Organización y Conducción de Obras (Int.) (1° Cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 166,
-    "fields": {
-      "name": "Paradigmas de Programación (2° Cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 167,
-    "fields": {
-      "name": "Pensamiento Sistémico (Int.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 168,
-    "fields": {
-      "name": "Planificación y Control de la Producción"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 169,
-    "fields": {
-      "name": "Polímeros (2do. Cuatrimestre)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 170,
-    "fields": {
-      "name": "Probabilidad y Estadística"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 171,
-    "fields": {
-      "name": "Probabilidad y Estadísticas"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 172,
-    "fields": {
-      "name": "Probabilidades y Estadística"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 173,
-    "fields": {
-      "name": "Procesos Industriales"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 174,
-    "fields": {
-      "name": "Protecciones en Centrales Eléctricas (2do.cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 175,
-    "fields": {
-      "name": "Protección de Materiales"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 176,
-    "fields": {
-      "name": "Proyecto Final (Int.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 177,
-    "fields": {
-      "name": "Proyecto Final (Integradora)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 178,
-    "fields": {
-      "name": "Proyecto Final - Integración V (Int.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 179,
-    "fields": {
-      "name": "Proyecto Final (Int.)(2° Cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 180,
-    "fields": {
-      "name": "Puentes y Prefabricaciones (1° Cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 181,
-    "fields": {
-      "name": "Puertos y Vías Navegables (1° Cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 182,
-    "fields": {
-      "name": "Química"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 183,
-    "fields": {
-      "name": "Química Analítica Aplicada"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 184,
-    "fields": {
-      "name": "Química Aplicada"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 185,
-    "fields": {
-      "name": "Química General"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 186,
-    "fields": {
-      "name": "Química Inorgánica"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 187,
-    "fields": {
-      "name": "Química Orgánica"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 188,
-    "fields": {
-      "name": "Química Analítica"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 189,
-    "fields": {
-      "name": "Redes de Información (2º cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 190,
-    "fields": {
-      "name": "Reingeniería (2do.Cuatrimestre )"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 191,
-    "fields": {
-      "name": "Relaciones Industriales"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 192,
-    "fields": {
-      "name": "Resistencia de Materiales"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 193,
-    "fields": {
-      "name": "Responsabilidad Social Institucional"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 194,
-    "fields": {
-      "name": "Retórica Profesional"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 195,
-    "fields": {
-      "name": "Rocas y Suelos (2° Cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 196,
-    "fields": {
-      "name": "Seguridad en Sistemas de Información ( 2 º Cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 197,
-    "fields": {
-      "name": "Seguridad, Higiene e Ingeniería Ambiental"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 198,
-    "fields": {
-      "name": "Seguridad, Riesgo Eléctrico y Medio Ambiente (2do.cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 199,
-    "fields": {
-      "name": "Simulación (1° Cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 200,
-    "fields": {
-      "name": "Simulación y Optimización"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 201,
-    "fields": {
-      "name": "Sintaxis y Semántica del Lenguaje (1° Cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 202,
-    "fields": {
-      "name": "Sistemas Avanzados de Bases de Datos (1° Cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 203,
-    "fields": {
-      "name": "Sistemas CAD - CAM"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 204,
-    "fields": {
-      "name": "Sistemas Operativos"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 205,
-    "fields": {
-      "name": "Sistemas de Gestión"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 206,
-    "fields": {
-      "name": "Sistemas de Potencia (1er.cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 207,
-    "fields": {
-      "name": "Sistemas de Representación"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 208,
-    "fields": {
-      "name": "Sistemas de Transmisión y Redes Inalámbricas (2° Cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 209,
-    "fields": {
-      "name": "Sistemas y Organizaciones"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 210,
-    "fields": {
-      "name": "Tecnología de Fabricación"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 211,
-    "fields": {
-      "name": "Tecnología de Información para la Gestión Empresarial"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 212,
-    "fields": {
-      "name": "Tecnología de la Construcción (Int)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 213,
-    "fields": {
-      "name": "Tecnología de la Energía Térmica"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 214,
-    "fields": {
-      "name": "Tecnología de los Materiales"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 215,
-    "fields": {
-      "name": "Tecnología del Calor"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 216,
-    "fields": {
-      "name": "Tecnología del Frío (1er.cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 217,
-    "fields": {
-      "name": "Tecnología del Hormigón (1° Cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 218,
-    "fields": {
-      "name": "Tecnología para la Explotación de Información (1° Cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 219,
-    "fields": {
-      "name": "Tecnología y Ensayo de Materiales Eléctricos (2do.cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 220,
-    "fields": {
-      "name": "Tecnología y Gestión Web ( 1º Cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 221,
-    "fields": {
-      "name": "Teoría de Control (2° Cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 222,
-    "fields": {
-      "name": "Teoría de los Campos (1er.cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 223,
-    "fields": {
-      "name": "Termodinámica"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 224,
-    "fields": {
-      "name": "Termodinámica (1er. Cuatrimestre)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 225,
-    "fields": {
-      "name": "Termodinámica (2do.cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 226,
-    "fields": {
-      "name": "Termodinámica y Máquinas Térmicas"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 227,
-    "fields": {
-      "name": "Vías III (1° Cuatr.)"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 228,
-    "fields": {
-      "name": "Vías de Comunicación I"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 229,
-    "fields": {
-      "name": "Vías de Comunicación II"
-    }
-  },
-  {
-    "model": "app.Subject",
-    "pk": 230,
-    "fields": {
-      "name": "Álgebra y Geometría Analítica"
-    }
-  }
-]
+  {"model": "app.Subject", "pk": 1, "fields": { "name": "Análisis Matemático I", "level":1, "career":1}},
+  {"model": "app.Subject", "pk": 2, "fields": { "name": "Álgebra y Geometría Analítica", "level":1, "career":1}},
+  {"model": "app.Subject", "pk": 3, "fields": { "name": "Matemática Discreta", "level":1, "career":1}},
+  {"model": "app.Subject", "pk": 4, "fields": { "name": "Sistemas y Organizaciones", "level":1, "career":1}},
+  {"model": "app.Subject", "pk": 5, "fields": { "name": "Algoritmos y Estructuras de Datos", "level":1, "career":1}},
+  {"model": "app.Subject", "pk": 6, "fields": { "name": "Arquitectura de Computadoras", "level":1, "career":1}},
+  {"model": "app.Subject", "pk": 7, "fields": { "name": "Física I", "level":1, "career":1}},
+  {"model": "app.Subject", "pk": 8, "fields": { "name": "Inglés I", "level":1, "career":1}},
+  {"model": "app.Subject", "pk": 9, "fields": { "name": "Química", "level":2, "career":1}},
+  {"model": "app.Subject", "pk": 10, "fields": { "name": "Análisis Matemático II", "level":2, "career":1}},
+  {"model": "app.Subject", "pk": 11, "fields": { "name": "Física II", "level":2, "career":1}},
+  {"model": "app.Subject", "pk": 12, "fields": { "name": "Análisis de Sistemas (Int.)", "level":2, "career":1}},
+  {"model": "app.Subject", "pk": 13, "fields": { "name": "Sintaxis y Semántica del Lenguaje (1° Cuatr.)", "level":2, "career":1}},
+  {"model": "app.Subject", "pk": 14, "fields": { "name": "Paradigmas de Programación (2° Cuatr.)", "level":2, "career":1}},
+  {"model": "app.Subject", "pk": 15, "fields": { "name": "Sistemas Operativos", "level":2, "career":1}},
+  {"model": "app.Subject", "pk": 16, "fields": { "name": "Sistemas de Representación", "level":2, "career":1}},
+  {"model": "app.Subject", "pk": 17, "fields": { "name": "Probabilidades y Estadística", "level":3, "career":1}},
+  {"model": "app.Subject", "pk": 18, "fields": { "name": "Diseño de Sistemas (Int.)", "level":3, "career":1}},
+  {"model": "app.Subject", "pk": 19, "fields": { "name": "Comunicaciones (1° Cuatr.)", "level":3, "career":1}},
+  {"model": "app.Subject", "pk": 20, "fields": { "name": "Matemática Superior (1° Cuatr.)", "level":3, "career":1}},
+  {"model": "app.Subject", "pk": 21, "fields": { "name": "Gestión de Datos (2° Cuatr.)", "level":3, "career":1}},
+  {"model": "app.Subject", "pk": 22, "fields": { "name": "Ingeniería Y Sociedad (2° Cuatr.)", "level":3, "career":1}},
+  {"model": "app.Subject", "pk": 23, "fields": { "name": "Economía (2° Cuatr.)", "level":3, "career":1}},
+  {"model": "app.Subject", "pk": 24, "fields": { "name": "Inglés II", "level":3, "career":1}},
+  {"model": "app.Subject", "pk": 25, "fields": { "name": "Seguridad en Sistemas de Información ( 2 º Cuatr.)", "level":3, "career":1}},
+  {"model": "app.Subject", "pk": 26, "fields": { "name": "Sistemas de Transmisión y Redes Inalámbricas (2° Cuatr.)", "level":3, "career":1}},
+  {"model": "app.Subject", "pk": 27, "fields": { "name": "Comunicación Profesional ( 1º o 2do Cuatr.)", "level":3, "career":1}},
+  {"model": "app.Subject", "pk": 28, "fields": { "name": "Tecnología y Gestión Web ( 1º Cuatr.)", "level":3, "career":1}},
+  {"model": "app.Subject", "pk": 29, "fields": { "name": "Emprendedorismo", "level":3, "career":1}},
+  {"model": "app.Subject", "pk": 30, "fields": { "name": "Redes de Información (2º cuatr.)", "level":4, "career":1}},
+  {"model": "app.Subject", "pk": 31, "fields": { "name": "Administración de Recursos (int)", "level":4, "career":1}},
+  {"model": "app.Subject", "pk": 32, "fields": { "name": "Investigación Operativa (1° Cuatr.)", "level":4, "career":1}},
+  {"model": "app.Subject", "pk": 33, "fields": { "name": "Simulación (1° Cuatr.)", "level":4, "career":1}},
+  {"model": "app.Subject", "pk": 34, "fields": { "name": "Ingeniería de Software", "level":4, "career":1}},
+  {"model": "app.Subject", "pk": 35, "fields": { "name": "Teoría de Control (2° Cuatr.)", "level":4, "career":1}},
+  {"model": "app.Subject", "pk": 36, "fields": { "name": "Legislación (2do. Cuatrimestre)", "level":4, "career":1}},
+  {"model": "app.Subject", "pk": 37, "fields": { "name": "Metodología de la Investigación(2º Cuatr)", "level":4, "career":1}},
+  {"model": "app.Subject", "pk": 38, "fields": { "name": "Tecnología para la Explotación de Información (1° Cuatr.)", "level":4, "career":1}},
+  {"model": "app.Subject", "pk": 39, "fields": { "name": "Auditoría de Sistemas de Información (1° Cuatr.)", "level":4, "career":1}},
+  {"model": "app.Subject", "pk": 40, "fields": { "name": "Proyecto Final (Int.)", "level":5, "career":1}},
+  {"model": "app.Subject", "pk": 41, "fields": { "name": "Inteligencia Artificial (1er. Cuatrimestre)", "level":5, "career":1}},
+  {"model": "app.Subject", "pk": 42, "fields": { "name": "Administración Gerencial (2do.Cuatrimestre )", "level":5, "career":1}},
+  {"model": "app.Subject", "pk": 43, "fields": { "name": "Sistemas de Gestión", "level":5, "career":1}},
+  {"model": "app.Subject", "pk": 44, "fields": { "name": "Interworking", "level":5, "career":1}},
+  {"model": "app.Subject", "pk": 45, "fields": { "name": "Ingeniería en Calidad", "level":5, "career":1}},
+  {"model": "app.Subject", "pk": 46, "fields": { "name": "Aplicaciones en Tiempo Real", "level":5, "career":1}},
+  {"model": "app.Subject", "pk": 47, "fields": { "name": "Reingeniería (2do.Cuatrimestre )", "level":5, "career":1}},
+  {"model": "app.Subject", "pk": 48, "fields": { "name": "Tecnología de Información para la Gestión Empresarial", "level":5, "career":1}},
+  {"model": "app.Subject", "pk": 49, "fields": { "name": "Sistemas Avanzados de Bases de Datos (1° Cuatr.)", "level":5, "career":1}},
+  {"model": "app.Subject", "pk": 50, "fields": { "name": "Análisis Matemático I", "level":1, "career":2}},
+  {"model": "app.Subject", "pk": 51, "fields": { "name": "Química General", "level":1, "career":2}},
+  {"model": "app.Subject", "pk": 52, "fields": { "name": "Álgebra y Geometría Analítica", "level":1, "career":2}},
+  {"model": "app.Subject", "pk": 53, "fields": { "name": "Física I", "level":1, "career":2}},
+  {"model": "app.Subject", "pk": 54, "fields": { "name": "Ingeniería Y Sociedad", "level":1, "career":2}},
+  {"model": "app.Subject", "pk": 55, "fields": { "name": "Ingeniería Mecánica I (Int.)", "level":1, "career":2}},
+  {"model": "app.Subject", "pk": 56, "fields": { "name": "Química Aplicada", "level":2, "career":2}},
+  {"model": "app.Subject", "pk": 57, "fields": { "name": "Estabilidad I", "level":2, "career":2}},
+  {"model": "app.Subject", "pk": 58, "fields": { "name": "Materiales Metálicos", "level":2, "career":2}},
+  {"model": "app.Subject", "pk": 59, "fields": { "name": "Análisis Matemático II", "level":2, "career":2}},
+  {"model": "app.Subject", "pk": 60, "fields": { "name": "Física II", "level":2, "career":2}},
+  {"model": "app.Subject", "pk": 61, "fields": { "name": "Ingeniería Ambiental y Seguridad Industrial", "level":2, "career":2}},
+  {"model": "app.Subject", "pk": 62, "fields": { "name": "Ingeniería Mecánica II (Int.)", "level":2, "career":2}},
+  {"model": "app.Subject", "pk": 63, "fields": { "name": "Inglés I", "level":2, "career":2}},
+  {"model": "app.Subject", "pk": 64, "fields": { "name": "Sistemas de Representación", "level":2, "career":2}},
+  {"model": "app.Subject", "pk": 65, "fields": { "name": "Fundamentos de Informática", "level":2, "career":2}},
+  {"model": "app.Subject", "pk": 66, "fields": { "name": "Termodinámica", "level":3, "career":2}},
+  {"model": "app.Subject", "pk": 67, "fields": { "name": "Mecánica Racional", "level":3, "career":2}},
+  {"model": "app.Subject", "pk": 68, "fields": { "name": "Mediciones y Ensayos", "level":3, "career":2}},
+  {"model": "app.Subject", "pk": 69, "fields": { "name": "Diseño Mecánico", "level":3, "career":2}},
+  {"model": "app.Subject", "pk": 70, "fields": { "name": "Cálculo Avanzado", "level":3, "career":2}},
+  {"model": "app.Subject", "pk": 71, "fields": { "name": "Ingeniería Mecánica III (Int.)", "level":3, "career":2}},
+  {"model": "app.Subject", "pk": 72, "fields": { "name": "Probabilidad y Estadística", "level":3, "career":2}},
+  {"model": "app.Subject", "pk": 73, "fields": { "name": "Estabilidad II", "level":3, "career":2}},
+  {"model": "app.Subject", "pk": 74, "fields": { "name": "Inglés II", "level":3, "career":2}},
+  {"model": "app.Subject", "pk": 75, "fields": { "name": "Economía", "level":3, "career":2}},
+  {"model": "app.Subject", "pk": 76, "fields": { "name": "Elementos de Máquinas (Integradora)", "level":4, "career":2}},
+  {"model": "app.Subject", "pk": 77, "fields": { "name": "Tecnología del Calor", "level":4, "career":2}},
+  {"model": "app.Subject", "pk": 78, "fields": { "name": "Mecánica de los Fluídos", "level":4, "career":2}},
+  {"model": "app.Subject", "pk": 79, "fields": { "name": "Electrotecnia y Máquinas Eléctricas", "level":4, "career":2}},
+  {"model": "app.Subject", "pk": 80, "fields": { "name": "Electrónica y Sistemas de Control", "level":4, "career":2}},
+  {"model": "app.Subject", "pk": 81, "fields": { "name": "Tecnología de Fabricación", "level":4, "career":2}},
+  {"model": "app.Subject", "pk": 82, "fields": { "name": "Organización Industrial", "level":4, "career":2}},
+  {"model": "app.Subject", "pk": 83, "fields": { "name": "Tecnología del Frío (1er.cuatr.)", "level":4, "career":2}},
+  {"model": "app.Subject", "pk": 84, "fields": { "name": "Sistemas CAD - CAM", "level":4, "career":2}},
+  {"model": "app.Subject", "pk": 85, "fields": { "name": "Mecánica y Estadística de Materiales Granulares", "level":4, "career":2}},
+  {"model": "app.Subject", "pk": 86, "fields": { "name": "Física III", "level":4, "career":2}},
+  {"model": "app.Subject", "pk": 87, "fields": { "name": "Mantenimiento", "level":5, "career":2}},
+  {"model": "app.Subject", "pk": 88, "fields": { "name": "Máquinas Alternativas y Turbomáquinas", "level":5, "career":2}},
+  {"model": "app.Subject", "pk": 89, "fields": { "name": "Instalaciones Industriales", "level":5, "career":2}},
+  {"model": "app.Subject", "pk": 90, "fields": { "name": "Metrología e Ingeniería de la Calidad", "level":5, "career":2}},
+  {"model": "app.Subject", "pk": 91, "fields": { "name": "Legislación", "level":5, "career":2}},
+  {"model": "app.Subject", "pk": 92, "fields": { "name": "Proyecto Final (Integradora)", "level":5, "career":2}},
+  {"model": "app.Subject", "pk": 93, "fields": { "name": "Automatización Industrial", "level":5, "career":2}},
+  {"model": "app.Subject", "pk": 94, "fields": { "name": "Diseño Mecánico de Cañerías", "level":5, "career":2}},
+  {"model": "app.Subject", "pk": 95, "fields": { "name": "Introducción a los Elementos Finitos", "level":5, "career":2}},
+  {"model": "app.Subject", "pk": 96, "fields": { "name": "Acústica y Vibraciones", "level":5, "career":2}},
+  {"model": "app.Subject", "pk": 97, "fields": { "name": "Conducción de grupos (1° Cuatr.)", "level":5, "career":2}},
+  {"model": "app.Subject", "pk": 98, "fields": { "name": "Automotores", "level":5, "career":2}},
+  {"model": "app.Subject", "pk": 99, "fields": { "name": "Análisis Matemático I", "level":1, "career":3}},
+  {"model": "app.Subject", "pk": 100, "fields": { "name": "Álgebra y Geometría Analítica", "level":1, "career":3}},
+  {"model": "app.Subject", "pk": 101, "fields": { "name": "Ingeniería Y Sociedad", "level":1, "career":3}},
+  {"model": "app.Subject", "pk": 102, "fields": { "name": "Física I", "level":1, "career":3}},
+  {"model": "app.Subject", "pk": 103, "fields": { "name": "Química General", "level":1, "career":3}},
+  {"model": "app.Subject", "pk": 104, "fields": { "name": "Integración Eléctrica I (Int.)", "level":1, "career":3}},
+  {"model": "app.Subject", "pk": 105, "fields": { "name": "Fundamentos de Informática", "level":1, "career":3}},
+  {"model": "app.Subject", "pk": 106, "fields": { "name": "Sistemas de Representación", "level":2, "career":3}},
+  {"model": "app.Subject", "pk": 107, "fields": { "name": "Física II (1er.cuatr.)", "level":2, "career":3}},
+  {"model": "app.Subject", "pk": 108, "fields": { "name": "Probabilidad y Estadísticas", "level":2, "career":3}},
+  {"model": "app.Subject", "pk": 109, "fields": { "name": "Electrotecnia I (2° Cuatr.)", "level":2, "career":3}},
+  {"model": "app.Subject", "pk": 110, "fields": { "name": "Estabilidad", "level":2, "career":3}},
+  {"model": "app.Subject", "pk": 111, "fields": { "name": "Integración Eléctrica II (Int.)", "level":2, "career":3}},
+  {"model": "app.Subject", "pk": 112, "fields": { "name": "Inglés I", "level":2, "career":3}},
+  {"model": "app.Subject", "pk": 113, "fields": { "name": "Análisis Matemático II (1er.cuatr.)", "level":2, "career":3}},
+  {"model": "app.Subject", "pk": 114, "fields": { "name": "Cálculo Numérico (2do.cuatr.)", "level":2, "career":3}},
+  {"model": "app.Subject", "pk": 115, "fields": { "name": "Tecnología y Ensayo de Materiales Eléctricos (2do.cuatr.)", "level":3, "career":3}},
+  {"model": "app.Subject", "pk": 116, "fields": { "name": "Instrumentos y Mediciones Eléctricas (1er.cuatr.)", "level":3, "career":3}},
+  {"model": "app.Subject", "pk": 117, "fields": { "name": "Teoría de los Campos (1er.cuatr.)", "level":3, "career":3}},
+  {"model": "app.Subject", "pk": 118, "fields": { "name": "Física III (1er.cuatr.)", "level":3, "career":3}},
+  {"model": "app.Subject", "pk": 119, "fields": { "name": "Maquinas Eléctricas I (Int)", "level":3, "career":3}},
+  {"model": "app.Subject", "pk": 120, "fields": { "name": "Electrotecnia II (2do.cuatr.)", "level":3, "career":3}},
+  {"model": "app.Subject", "pk": 121, "fields": { "name": "Termodinámica (2do.cuatr.)", "level":3, "career":3}},
+  {"model": "app.Subject", "pk": 122, "fields": { "name": "Fundamentos para el Análisis de Señales (2do.cuatr.)", "level":3, "career":3}},
+  {"model": "app.Subject", "pk": 123, "fields": { "name": "Mecánica Técnica (1er.cuatr.)", "level":3, "career":3}},
+  {"model": "app.Subject", "pk": 124, "fields": { "name": "Conducción de Grupos(1er.cuatr.)", "level":3, "career":3}},
+  {"model": "app.Subject", "pk": 125, "fields": { "name": "Inglés II", "level":4, "career":3}},
+  {"model": "app.Subject", "pk": 126, "fields": { "name": "Economía (1er.cuatr.)", "level":4, "career":3}},
+  {"model": "app.Subject", "pk": 127, "fields": { "name": "Electrónica I (1er.cuatr.)", "level":4, "career":3}},
+  {"model": "app.Subject", "pk": 128, "fields": { "name": "Máquinas Eléctricas II (Int.)(1er.cuatr.)", "level":4, "career":3}},
+  {"model": "app.Subject", "pk": 129, "fields": { "name": "Seguridad, Riesgo Eléctrico y Medio Ambiente (2do.cuatr.)", "level":4, "career":3}},
+  {"model": "app.Subject", "pk": 130, "fields": { "name": "Instalaciones Eléctricas y Luminotecnia (Int.)", "level":4, "career":3}},
+  {"model": "app.Subject", "pk": 131, "fields": { "name": "Control Automático (2do.cuatr.)", "level":4, "career":3}},
+  {"model": "app.Subject", "pk": 132, "fields": { "name": "Máquinas Térmicas, Hidráulicas y de Fluídos (2do.cuatr.)", "level":4, "career":3}},
+  {"model": "app.Subject", "pk": 133, "fields": { "name": "Legislación (1er.cuatr.)", "level":4, "career":3}},
+  {"model": "app.Subject", "pk": 134, "fields": { "name": "Organización y Administración de Empresas (2do.cuatr.)", "level":4, "career":3}},
+  {"model": "app.Subject", "pk": 135, "fields": { "name": "Electrónica II (1° Cuatr.)", "level":5, "career":3}},
+  {"model": "app.Subject", "pk": 136, "fields": { "name": "Generación, transmisión y distribución de la Energía Eléctrica", "level":5, "career":3}},
+  {"model": "app.Subject", "pk": 137, "fields": { "name": "Sistemas de Potencia (1er.cuatr.)", "level":5, "career":3}},
+  {"model": "app.Subject", "pk": 138, "fields": { "name": "Accionamientos y Controles Eléctricos (2do.cuatr.)", "level":5, "career":3}},
+  {"model": "app.Subject", "pk": 139, "fields": { "name": "Proyecto Final (Int.)", "level":5, "career":3}},
+  {"model": "app.Subject", "pk": 140, "fields": { "name": "Impacto Ambiental de Líneas y Centrales Eléctricas (2° Cuatr.)", "level":5, "career":3}},
+  {"model": "app.Subject", "pk": 141, "fields": { "name": "Elementos de Máquinas y Tecnología Mecánica (1er.cuatr.)", "level":5, "career":3}},
+  {"model": "app.Subject", "pk": 142, "fields": { "name": "Mantenimiento de Plantas(1er.cuatr.)", "level":5, "career":3}},
+  {"model": "app.Subject", "pk": 143, "fields": { "name": "Electrónica Aplicada (2do.cuatr.)", "level":5, "career":3}},
+  {"model": "app.Subject", "pk": 144, "fields": { "name": "Marco Regulatorio Energético(2do.cuatr.)", "level":5, "career":3}},
+  {"model": "app.Subject", "pk": 145, "fields": { "name": "Protecciones en Centrales Eléctricas (2do.cuatr.)", "level":5, "career":3}},
+  {"model": "app.Subject", "pk": 146, "fields": { "name": "Análisis Matemático I", "level":1, "career":4}},
+  {"model": "app.Subject", "pk": 147, "fields": { "name": "Química General", "level":1, "career":4}},
+  {"model": "app.Subject", "pk": 148, "fields": { "name": "Sistemas de Representación", "level":1, "career":4}},
+  {"model": "app.Subject", "pk": 149, "fields": { "name": "Informática I", "level":1, "career":4}},
+  {"model": "app.Subject", "pk": 150, "fields": { "name": "Pensamiento Sistémico (Int.)", "level":1, "career":4}},
+  {"model": "app.Subject", "pk": 151, "fields": { "name": "Física I", "level":1, "career":4}},
+  {"model": "app.Subject", "pk": 152, "fields": { "name": "Álgebra y Geometría Analítica", "level":1, "career":4}},
+  {"model": "app.Subject", "pk": 153, "fields": { "name": "Ingeniería Y Sociedad", "level":1, "career":4}},
+  {"model": "app.Subject", "pk": 154, "fields": { "name": "Análisis Matemático II", "level":2, "career":4}},
+  {"model": "app.Subject", "pk": 155, "fields": { "name": "Administración General (Int.)", "level":2, "career":4}},
+  {"model": "app.Subject", "pk": 156, "fields": { "name": "Probabilidad y Estadística", "level":2, "career":4}},
+  {"model": "app.Subject", "pk": 157, "fields": { "name": "Ciencia de los Materiales", "level":2, "career":4}},
+  {"model": "app.Subject", "pk": 158, "fields": { "name": "Física II", "level":2, "career":4}},
+  {"model": "app.Subject", "pk": 159, "fields": { "name": "Economía General", "level":2, "career":4}},
+  {"model": "app.Subject", "pk": 160, "fields": { "name": "Informática II", "level":2, "career":4}},
+  {"model": "app.Subject", "pk": 161, "fields": { "name": "Inglés I", "level":2, "career":4}},
+  {"model": "app.Subject", "pk": 162, "fields": { "name": "Costos y Presupuestos", "level":3, "career":4}},
+  {"model": "app.Subject", "pk": 163, "fields": { "name": "Estudio del Trabajo (Int.)", "level":3, "career":4}},
+  {"model": "app.Subject", "pk": 164, "fields": { "name": "Comercialización", "level":3, "career":4}},
+  {"model": "app.Subject", "pk": 165, "fields": { "name": "Termodinámica y Máquinas Térmicas", "level":3, "career":4}},
+  {"model": "app.Subject", "pk": 166, "fields": { "name": "Estática y Resistencia de Materiales", "level":3, "career":4}},
+  {"model": "app.Subject", "pk": 167, "fields": { "name": "Mecánica de los Fluídos", "level":3, "career":4}},
+  {"model": "app.Subject", "pk": 168, "fields": { "name": "Economía de la Empresa", "level":3, "career":4}},
+  {"model": "app.Subject", "pk": 169, "fields": { "name": "Electrotecnia y Máquinas Eléctricas", "level":3, "career":4}},
+  {"model": "app.Subject", "pk": 170, "fields": { "name": "Análisis Numérico y Cálculo Avanzado", "level":3, "career":4}},
+  {"model": "app.Subject", "pk": 171, "fields": { "name": "Seguridad, Higiene e Ingeniería Ambiental", "level":4, "career":4}},
+  {"model": "app.Subject", "pk": 172, "fields": { "name": "Investigación Operativa", "level":4, "career":4}},
+  {"model": "app.Subject", "pk": 173, "fields": { "name": "Procesos Industriales", "level":4, "career":4}},
+  {"model": "app.Subject", "pk": 174, "fields": { "name": "Mecánica y Mecanismos", "level":4, "career":4}},
+  {"model": "app.Subject", "pk": 175, "fields": { "name": "Evaluación de Proyectos (Int.)", "level":4, "career":4}},
+  {"model": "app.Subject", "pk": 176, "fields": { "name": "Planificación y Control de la Producción", "level":4, "career":4}},
+  {"model": "app.Subject", "pk": 177, "fields": { "name": "Diseño de Producto", "level":4, "career":4}},
+  {"model": "app.Subject", "pk": 178, "fields": { "name": "Inglés II", "level":4, "career":4}},
+  {"model": "app.Subject", "pk": 179, "fields": { "name": "Instalaciones Industriales", "level":4, "career":4}},
+  {"model": "app.Subject", "pk": 180, "fields": { "name": "Legislación", "level":4, "career":4}},
+  {"model": "app.Subject", "pk": 181, "fields": { "name": "Emprendedorismo", "level":4, "career":4}},
+  {"model": "app.Subject", "pk": 182, "fields": { "name": "Mantenimiento (1° Cuatr.)", "level":5, "career":4}},
+  {"model": "app.Subject", "pk": 183, "fields": { "name": "Manejo de Materiales y Distribución de Planta", "level":5, "career":4}},
+  {"model": "app.Subject", "pk": 184, "fields": { "name": "Comercio Exterior", "level":5, "career":4}},
+  {"model": "app.Subject", "pk": 185, "fields": { "name": "Relaciones Industriales", "level":5, "career":4}},
+  {"model": "app.Subject", "pk": 186, "fields": { "name": "Proyecto Final (Int.)", "level":5, "career":4}},
+  {"model": "app.Subject", "pk": 187, "fields": { "name": "Ingeniería en Calidad", "level":5, "career":4}},
+  {"model": "app.Subject", "pk": 188, "fields": { "name": "Control de Gestión", "level":5, "career":4}},
+  {"model": "app.Subject", "pk": 189, "fields": { "name": "Logística", "level":5, "career":4}},
+  {"model": "app.Subject", "pk": 190, "fields": { "name": "Simulación y Optimización", "level":5, "career":4}},
+  {"model": "app.Subject", "pk": 191, "fields": { "name": "Finanzas y Control Empresario", "level":5, "career":4}},
+  {"model": "app.Subject", "pk": 192, "fields": { "name": "Instrumentación y Automatización", "level":5, "career":4}},
+  {"model": "app.Subject", "pk": 193, "fields": { "name": "Gestión Pyme", "level":5, "career":4}},
+  {"model": "app.Subject", "pk": 194, "fields": { "name": "Gestión Ambiental", "level":5, "career":4}},
+  {"model": "app.Subject", "pk": 195, "fields": { "name": "Responsabilidad Social Institucional", "level":5, "career":4}},
+  {"model": "app.Subject", "pk": 196, "fields": { "name": "Retórica Profesional", "level":5, "career":4}},
+  {"model": "app.Subject", "pk": 197, "fields": { "name": "Integración I (Int.)", "level":1, "career":5}},
+  {"model": "app.Subject", "pk": 198, "fields": { "name": "Ingeniería Y Sociedad", "level":1, "career":5}},
+  {"model": "app.Subject", "pk": 199, "fields": { "name": "Algebra y Geometría Analítica", "level":1, "career":5}},
+  {"model": "app.Subject", "pk": 200, "fields": { "name": "Análisis Matemático I", "level":1, "career":5}},
+  {"model": "app.Subject", "pk": 201, "fields": { "name": "Física I", "level":1, "career":5}},
+  {"model": "app.Subject", "pk": 202, "fields": { "name": "Química General", "level":1, "career":5}},
+  {"model": "app.Subject", "pk": 203, "fields": { "name": "Fundamentos de Informática", "level":1, "career":5}},
+  {"model": "app.Subject", "pk": 204, "fields": { "name": "Integración II (Int.)", "level":2, "career":5}},
+  {"model": "app.Subject", "pk": 205, "fields": { "name": "Probabilidad y Estadística", "level":2, "career":5}},
+  {"model": "app.Subject", "pk": 206, "fields": { "name": "Química Inorgánica", "level":2, "career":5}},
+  {"model": "app.Subject", "pk": 207, "fields": { "name": "Análisis Matemático II", "level":2, "career":5}},
+  {"model": "app.Subject", "pk": 208, "fields": { "name": "Física II", "level":2, "career":5}},
+  {"model": "app.Subject", "pk": 209, "fields": { "name": "Química Orgánica", "level":2, "career":5}},
+  {"model": "app.Subject", "pk": 210, "fields": { "name": "Inglés I", "level":2, "career":5}},
+  {"model": "app.Subject", "pk": 211, "fields": { "name": "Sistemas de Representación", "level":2, "career":5}},
+  {"model": "app.Subject", "pk": 212, "fields": { "name": "Integración III (Int.)", "level":3, "career":5}},
+  {"model": "app.Subject", "pk": 213, "fields": { "name": "Matemática Superior Aplicada (2do. Cuatrimestre)", "level":3, "career":5}},
+  {"model": "app.Subject", "pk": 214, "fields": { "name": "Termodinámica (1er. Cuatrimestre)", "level":3, "career":5}},
+  {"model": "app.Subject", "pk": 215, "fields": { "name": "Economía", "level":3, "career":5}},
+  {"model": "app.Subject", "pk": 216, "fields": { "name": "Legislación (1er. Cuatrimestre)", "level":3, "career":5}},
+  {"model": "app.Subject", "pk": 217, "fields": { "name": "Mecánica - Eléctrica Industrial", "level":3, "career":5}},
+  {"model": "app.Subject", "pk": 218, "fields": { "name": "Fisicoquímica", "level":3, "career":5}},
+  {"model": "app.Subject", "pk": 219, "fields": { "name": "Fenómenos de Transporte", "level":3, "career":5}},
+  {"model": "app.Subject", "pk": 220, "fields": { "name": "Química Analítica", "level":3, "career":5}},
+  {"model": "app.Subject", "pk": 221, "fields": { "name": "Inglés II", "level":3, "career":5}},
+  {"model": "app.Subject", "pk": 222, "fields": { "name": "Integración IV (Int.)", "level":4, "career":5}},
+  {"model": "app.Subject", "pk": 223, "fields": { "name": "Operaciones Unitarias I", "level":4, "career":5}},
+  {"model": "app.Subject", "pk": 224, "fields": { "name": "Tecnología de la Energía Térmica", "level":4, "career":5}},
+  {"model": "app.Subject", "pk": 225, "fields": { "name": "Biotecnología", "level":4, "career":5}},
+  {"model": "app.Subject", "pk": 226, "fields": { "name": "Operaciones Unitarias II", "level":4, "career":5}},
+  {"model": "app.Subject", "pk": 227, "fields": { "name": "Ingeniería de las Reacciones Químicas", "level":4, "career":5}},
+  {"model": "app.Subject", "pk": 228, "fields": { "name": "Organización Industrial", "level":4, "career":5}},
+  {"model": "app.Subject", "pk": 229, "fields": { "name": "Química Analítica Aplicada", "level":4, "career":5}},
+  {"model": "app.Subject", "pk": 230, "fields": { "name": "Control Automático de Procesos", "level":5, "career":5}},
+  {"model": "app.Subject", "pk": 231, "fields": { "name": "Control Estadísticos de Procesos (2do. Cuatrimestre)", "level":5, "career":5}},
+  {"model": "app.Subject", "pk": 232, "fields": { "name": "Proyecto Final - Integración V (Int.)", "level":5, "career":5}},
+  {"model": "app.Subject", "pk": 233, "fields": { "name": "Ingeniería Ambiental", "level":5, "career":5}},
+  {"model": "app.Subject", "pk": 234, "fields": { "name": "Introducción a la Problemática Ambiental, Saneamiento y Seguridad", "level":5, "career":5}},
+  {"model": "app.Subject", "pk": 235, "fields": { "name": "Ingeniería de las Reacciones Químicas Avanzadas (1er. Cuat.)", "level":5, "career":5}},
+  {"model": "app.Subject", "pk": 236, "fields": { "name": "Corrosión Metálica Y Protección", "level":5, "career":5}},
+  {"model": "app.Subject", "pk": 237, "fields": { "name": "Protección de Materiales", "level":5, "career":5}},
+  {"model": "app.Subject", "pk": 238, "fields": { "name": "Materiales Cerámicos (2do. Cuatrimestre)", "level":5, "career":5}},
+  {"model": "app.Subject", "pk": 239, "fields": { "name": "Polímeros (2do. Cuatrimestre)", "level":5, "career":5}},
+  {"model": "app.Subject", "pk": 240, "fields": { "name": "Electroquímica Industrial (1er. Cuatrimestre)", "level":5, "career":5}},
+  {"model": "app.Subject", "pk": 241, "fields": { "name": "Energías Alternativas", "level":5, "career":5}},
+  {"model": "app.Subject", "pk": 242, "fields": { "name": "Análisis Matemático I", "level":1, "career":6}},
+  {"model": "app.Subject", "pk": 243, "fields": { "name": "Álgebra y Geometría Analítica", "level":1, "career":6}},
+  {"model": "app.Subject", "pk": 244, "fields": { "name": "Ingeniería y Sociedad (1° Cuatr.)", "level":1, "career":6}},
+  {"model": "app.Subject", "pk": 245, "fields": { "name": "Ingeniería Civil I (Int)", "level":1, "career":6}},
+  {"model": "app.Subject", "pk": 246, "fields": { "name": "Sistemas de Representación", "level":1, "career":6}},
+  {"model": "app.Subject", "pk": 247, "fields": { "name": "Química General", "level":1, "career":6}},
+  {"model": "app.Subject", "pk": 248, "fields": { "name": "Física I", "level":1, "career":6}},
+  {"model": "app.Subject", "pk": 249, "fields": { "name": "Fundamentos de Informática (2° Cuatr.)", "level":1, "career":6}},
+  {"model": "app.Subject", "pk": 250, "fields": { "name": "Análisis Matemático II", "level":2, "career":6}},
+  {"model": "app.Subject", "pk": 251, "fields": { "name": "Estabilidad", "level":2, "career":6}},
+  {"model": "app.Subject", "pk": 252, "fields": { "name": "Ingeniería Civil II (Int)", "level":2, "career":6}},
+  {"model": "app.Subject", "pk": 253, "fields": { "name": "Tecnología de los Materiales", "level":2, "career":6}},
+  {"model": "app.Subject", "pk": 254, "fields": { "name": "Física II", "level":2, "career":6}},
+  {"model": "app.Subject", "pk": 255, "fields": { "name": "Probabilidad y Estadística", "level":2, "career":6}},
+  {"model": "app.Subject", "pk": 256, "fields": { "name": "Inglés I", "level":2, "career":6}},
+  {"model": "app.Subject", "pk": 257, "fields": { "name": "Resistencia de Materiales", "level":3, "career":6}},
+  {"model": "app.Subject", "pk": 258, "fields": { "name": "Tecnología del Hormigón (1° Cuatr.)", "level":3, "career":6}},
+  {"model": "app.Subject", "pk": 259, "fields": { "name": "Tecnología de la Construcción (Int)", "level":3, "career":6}},
+  {"model": "app.Subject", "pk": 260, "fields": { "name": "Geotopografía (1° Cuatr.)", "level":3, "career":6}},
+  {"model": "app.Subject", "pk": 261, "fields": { "name": "Hidráulica General y Aplicada", "level":3, "career":6}},
+  {"model": "app.Subject", "pk": 262, "fields": { "name": "Cálculo Avanzado (1° Cuatr.)", "level":3, "career":6}},
+  {"model": "app.Subject", "pk": 263, "fields": { "name": "Instalaciones Eléctricas y Acústicas (2° Cuatr.)", "level":3, "career":6}},
+  {"model": "app.Subject", "pk": 264, "fields": { "name": "Instalaciones Termomecánicas (2° Cuatr.)", "level":3, "career":6}},
+  {"model": "app.Subject", "pk": 265, "fields": { "name": "Economía (2° Cuatr.)", "level":3, "career":6}},
+  {"model": "app.Subject", "pk": 266, "fields": { "name": "Inglés II", "level":3, "career":6}},
+  {"model": "app.Subject", "pk": 267, "fields": { "name": "Geotecnia (2° Cuatr.)", "level":4, "career":6}},
+  {"model": "app.Subject", "pk": 268, "fields": { "name": "Instalaciones Sanitarias y de Gas (1° Cuatr.)", "level":4, "career":6}},
+  {"model": "app.Subject", "pk": 269, "fields": { "name": "Diseño Arquitectónico, Planeamiento y Urbanismo (Int)", "level":4, "career":6}},
+  {"model": "app.Subject", "pk": 270, "fields": { "name": "Análisis Estructural I", "level":4, "career":6}},
+  {"model": "app.Subject", "pk": 271, "fields": { "name": "Estructuras de Hormigón", "level":4, "career":6}},
+  {"model": "app.Subject", "pk": 272, "fields": { "name": "Hidrología y Obras Hidráulicas", "level":4, "career":6}},
+  {"model": "app.Subject", "pk": 273, "fields": { "name": "Ingeniería Legal", "level":4, "career":6}},
+  {"model": "app.Subject", "pk": 274, "fields": { "name": "Vías de Comunicación I", "level":4, "career":6}},
+  {"model": "app.Subject", "pk": 275, "fields": { "name": "Ferrocarriles (2° Cuatr.)", "level":4, "career":6}},
+  {"model": "app.Subject", "pk": 276, "fields": { "name": "Construcciones Metálicas y de Madera (2° Cuatr.)", "level":5, "career":6}},
+  {"model": "app.Subject", "pk": 277, "fields": { "name": "Cimentaciones (1° Cuatr.)", "level":5, "career":6}},
+  {"model": "app.Subject", "pk": 278, "fields": { "name": "Ingeniería Sanitaria (2° Cuatr.)", "level":5, "career":6}},
+  {"model": "app.Subject", "pk": 279, "fields": { "name": "Organización y Conducción de Obras (Int.) (1° Cuatr.)", "level":5, "career":6}},
+  {"model": "app.Subject", "pk": 280, "fields": { "name": "Análisis Estructural II", "level":5, "career":6}},
+  {"model": "app.Subject", "pk": 281, "fields": { "name": "Vías de Comunicación II", "level":5, "career":6}},
+  {"model": "app.Subject", "pk": 282, "fields": { "name": "Proyecto Final (Int.)(2° Cuatr.)", "level":5, "career":6}},
+  {"model": "app.Subject", "pk": 283, "fields": { "name": "Diseño Arquitectónico y Planeamiento II (Anual)", "level":5, "career":6}},
+  {"model": "app.Subject", "pk": 284, "fields": { "name": "Rocas y Suelos (2° Cuatr.)", "level":5, "career":6}},
+  {"model": "app.Subject", "pk": 285, "fields": { "name": "Puentes y Prefabricaciones (1° Cuatr.)", "level":5, "career":6}},
+  {"model": "app.Subject", "pk": 286, "fields": { "name": "Centrales y Máquinas Hidráulicas (1° Cuatr.)", "level":5, "career":6}},
+  {"model": "app.Subject", "pk": 287, "fields": { "name": "Diseño Estructural(1° Cuatr.)", "level":5, "career":6}},
+  {"model": "app.Subject", "pk": 288, "fields": { "name": "Puertos y Vías Navegables (1° Cuatr.)", "level":5, "career":6}},
+  {"model": "app.Subject", "pk": 289, "fields": { "name": "Impacto Ambiental en Obras Civiles (1° Cuatr.)", "level":5, "career":6}},
+  {"model": "app.Subject", "pk": 290, "fields": { "name": "Vías III (1° Cuatr.)", "level":5, "career":6}}
+  ]
+  
