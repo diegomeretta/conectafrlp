@@ -7,7 +7,52 @@
 
 {% block content %}
 
-    
+<div class="pcoded-content">
+    <div class="pcoded-inner-content">
+        <!-- [ breadcrumb ] start -->
+
+        <!-- [ breadcrumb ] end -->
+        <div class="main-body">
+            <div class="page-wrapper">
+                <!-- [ Main Content ] start -->
+                <div class="row">
+                    <div class="col-md-12 col-xl-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5>Resumen</h5>
+                            </div>
+
+                            <div class="card-body">
+
+                                <table class="table table-hover">
+                                    <tbody>
+                                        <tr>
+                                            <th>Usuario Administrador</th>
+                                            <th>{{username}}</th>
+                                        </tr>
+                                        <tr>
+                                            <th>Cantidad de Grupos Creados</th>
+                                            <th>{{groups}}</th>
+                                        </tr>
+                                        <tr>
+                                            <th>Cantidad de Usuarios Registrados</th>
+                                            <th>{{users}}</th>
+                                        </tr>
+                                        <tr>
+                                            <th>Cantidad de Mensajes enviados</th>
+                                            <th>{{messages}}</th>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- [ Main Content ] end -->
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock content %}
 
