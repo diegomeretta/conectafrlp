@@ -55,7 +55,7 @@ class Subject(models.Model):
 class Group(models.Model):
     # Fields
     name = models.CharField(max_length=32)
-    contacts = models.ManyToManyField(Contact)
+    contacts = models.ManyToManyField(Contact, related_name='groups')
     career = models.ForeignKey(Career, on_delete=models.CASCADE)
     comision = models.CharField(max_length=32, default="")
     subject = models.ForeignKey(Subject, on_delete=models.CASCADE)
