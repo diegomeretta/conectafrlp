@@ -50,6 +50,10 @@ class AltaGrupoForm(ModelForm):
             })
         }
 
+    def __init__(self, *args, **kwargs):
+        super(AltaGrupoForm, self).__init__(*args, **kwargs)
+        self.fields['contacts'].queryset = Contact.objects.filter(contact_rol_id=1)
+
 class CreateContactForm(ModelForm):
     class Meta:
         model = Contact
