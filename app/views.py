@@ -6,13 +6,14 @@ Copyright (c) 2019 - present AppSeed.us
 
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+from django.core.exceptions import ObjectDoesNotExist
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.shortcuts import render, get_object_or_404, redirect
 from django.template import loader
 from django.http import HttpResponse
 from django import template
 from .forms import AltaUsuarioForm, AltaGrupoForm, CreateContactForm, SendMessageForm, EditContactForm
-from .models import Group, Usuario, Contact, Rol, Message
+from .models import Group, Usuario, Contact, Rol, Message, Subject
 from os import system
 import os
 
@@ -93,13 +94,41 @@ def create_group(request):
 
 @login_required(login_url="/login/")
 def get_groups(request):
-    return render(request, "get-groups.html", {'groups' : Group.objects.all() })
+    groups = Group.objects.all()
+    for group in groups:
+        subject = Subject.objects.filter(id=group.subject.id).first()
+        group.subject_name = subject.name
+
+    paginator = Paginator(groups, 5)
+    page = request.GET.get('page')
+ 
+    try:
+        group_paginator = paginator.page(page)
+    except PageNotAnInteger:
+        group_paginator = paginator.page(1)
+ 
+    except EmptyPage:
+        group_paginator = paginator.page(paginator.num_pages)
+
+    return render(request, "get-groups.html", {'page': page, 'groups' : group_paginator})
 
 @login_required(login_url="/login/")
-def get_group(request, id):
+def edit_group(request, id):
     group = Group.objects.get(id=id)
     contacts = Contact.objects.all()
-    return render(request, "get-group.html", {'group':group, 'contacts':contacts})
+    return render(request, "edit-group.html", {'group':group, 'contacts':contacts})
+
+@login_required(login_url="/login/")
+def delete_group(request, id):
+    try:
+        group = Group.objects.get(id=id)
+        group.delete()
+        messages.add_message(request, messages.WARNING, "Contacto eliminado exitosamente.")
+    
+    except ObjectDoesNotExist:
+        messages.add_message(request, messages.ERROR, 'No encontramos el grupo {id}.'.format(id=id))
+
+    return redirect('/grupos')
 
 @login_required(login_url="/login/")
 def create_contact(request):
@@ -140,29 +169,34 @@ def get_contacts(request):
 
 @login_required(login_url="/login/")
 def edit_contact(request, name):
-    contact = Contact.objects.get(name=name)
-    if contact==None:
-        return redirect('/error-404.html')
-    elif request.method == "POST":
-        form = EditContactForm(request.POST, instance=contact)
-        if form.is_valid():
-            contact = form.save()
-            contact.save()
-            messages.add_message(request, messages.SUCCESS, "Contacto modificado exitosamente.")
-            return redirect('/contactos')
-    else:
-        form = EditContactForm(instance=contact)
-        return render(request, 'edit-contact.html', { 'form': form, 'contact': contact })
+    try:
+        contact = Contact.objects.get(name=name)
+
+        if request.method == "POST":
+            form = EditContactForm(request.POST, instance=contact)
+            if form.is_valid():
+                contact = form.save()
+                contact.save()
+                messages.add_message(request, messages.SUCCESS, "Contacto modificado exitosamente.")
+                return redirect('/contactos')
+        else:
+            form = EditContactForm(instance=contact)
+            return render(request, 'edit-contact.html', { 'form': form, 'contact': contact })
+    
+    except ObjectDoesNotExist:
+        messages.add_message(request, messages.ERROR, 'No encontramos el contacto @{name}.'.format(name=name))
+        return redirect('/contactos')
 
 @login_required(login_url="/login/")
 def delete_contact(request, name):
-    contact = Contact.objects.get(name=name)
+    try:
+        contact = Contact.objects.get(name=name)
+        contact.delete()
+        messages.add_message(request, messages.WARNING, "Contacto eliminado exitosamente.")
+    
+    except ObjectDoesNotExist:
+        messages.add_message(request, messages.ERROR, 'No encontramos el contacto @{name}.'.format(name=name))
 
-    if contact==None:
-        return redirect('/error-404.html')
-
-    contact.delete()
-    messages.add_message(request, messages.WARNING, "Contacto eliminado exitosamente.")
     return redirect('/contactos')
  
 @login_required(login_url="/login/")
@@ -187,12 +221,16 @@ def send_message(request):
         return render(request, "send-message.html", { 'form' : form })
     elif request.method == "GET":
         form = SendMessageForm(request.POST or None)
-        return render(request, "send-message.html", { 'form' : form })
+        groups = Group.objects.all()
+        return render(request, "send-message.html", { 'form' : form, 'groups' : groups })
 
 
 @login_required(login_url="/login/")
 def profile(request):
     usuario = Usuario.objects.filter(username=request.user.username).first()
+    if usuario==None:
+        return redirect('/error-500.html')
+
     usuario.api_hash = "********************"+usuario.api_hash[20:]
     if request.method == "GET":
         return render(request, "profile.html", {'usuario': usuario})
