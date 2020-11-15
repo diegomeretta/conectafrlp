@@ -123,7 +123,7 @@ def delete_group(request, id):
     try:
         group = Group.objects.get(id=id)
         group.delete()
-        messages.add_message(request, messages.WARNING, "Contacto eliminado exitosamente.")
+        messages.add_message(request, messages.WARNING, "Grupo eliminado exitosamente.")
     
     except ObjectDoesNotExist:
         messages.add_message(request, messages.ERROR, 'No encontramos el grupo {id}.'.format(id=id))
