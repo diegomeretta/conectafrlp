@@ -93,8 +93,7 @@ class SendMessageForm(ModelForm):
                 "placeholder" : "Mensaje",
                 "class": "form-control"
             }),
-            'id_group': TextInput(attrs={
-                "placeholder" : "id_grupo",
+            'group': Select(attrs={
                 "class": "form-control"
             })
         }
