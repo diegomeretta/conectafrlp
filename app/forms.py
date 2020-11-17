@@ -1,4 +1,4 @@
-from django.forms import ModelForm, TextInput, Select
+from django.forms import ModelForm, TextInput, Select, SelectMultiple
 from .models import Usuario, Group, Contact, Message
 
 class AltaUsuarioForm(ModelForm):
@@ -27,7 +27,7 @@ class AltaUsuarioForm(ModelForm):
 class AltaGrupoForm(ModelForm):
     class Meta:
         model = Group
-        fields = ["name", "career", "commission", "subject"]
+        fields = ["name", "career", "commission", "subject", "contacts"]
         widgets = {
             'name': TextInput(attrs={
                 "placeholder" : "",
@@ -42,8 +42,16 @@ class AltaGrupoForm(ModelForm):
             'subject': Select(attrs={
                 "placeholder" : "",
                 "class": "form-control"
+            }),
+            'contacts': SelectMultiple(attrs={
+                "placeholder" : "",
+                "class": "form-control"
             })
         }
+
+    def __init__(self, *args, **kwargs):
+        super(AltaGrupoForm, self).__init__(*args, **kwargs)
+        self.fields['contacts'].queryset = Contact.objects.filter(contact_rol_id=1)
 
 class CreateContactForm(ModelForm):
     class Meta:

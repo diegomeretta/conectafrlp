@@ -65,7 +65,7 @@ class Commission(models.Model):
 class Group(models.Model):
     # Fields
     name = models.CharField(max_length=32)
-    contacts = models.ManyToManyField(Contact)
+    contacts = models.ManyToManyField(Contact, related_name='groups')
     career = models.ForeignKey(Career, default=0, on_delete=models.CASCADE)
     commission = models.ForeignKey(Commission, default=0, on_delete=models.CASCADE)
     subject = models.ForeignKey(Subject, on_delete=models.CASCADE)
