@@ -213,14 +213,12 @@ def send_message(request):
             usuarios = Usuario.objects.filter(username=request.user.username)
             usuario = usuarios.first()
             texto = request.POST.get('text_message')
-            
-            grupo = request.POST.get('id_group')
+            grupo = Group.objects.filter(id=request.POST.get('group')).first()
             mensaje = texto.replace(" ", "_")
-            comando = "python mensaje.py " + usuario.api_id + " " + usuario.api_hash + " " + str(grupo) + " " + mensaje
+            comando = "python mensaje.py " + usuario.api_id + " " + usuario.api_hash + " " + str(grupo.telegram_id) + " " + mensaje
             print(comando)
             respuesta = os.system(comando)
-
-            return redirect('/sendmessage')
+            return redirect('/enviarmensaje')
         else:
             form = SendMessageForm()
 

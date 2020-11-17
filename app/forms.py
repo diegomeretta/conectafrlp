@@ -95,7 +95,7 @@ class EditContactForm(ModelForm):
 class SendMessageForm(ModelForm):
     class Meta:
         model = Message
-        fields = ["text_message", "id_group"]
+        fields = ["text_message", "group"]
         widgets = {
             'text_message': TextInput(attrs={
                 "placeholder" : "Mensaje",

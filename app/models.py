@@ -74,5 +74,5 @@ class Group(models.Model):
 
 class Message(models.Model):
     text_message = models.CharField(max_length=32)
-    id_group = models.CharField(max_length=32)
+    group = models.ForeignKey(Group, on_delete=models.CASCADE)
 
