@@ -72,25 +72,27 @@ def create_group(request):
     if request.method == "POST":
         form = AltaGrupoForm(request.POST)
         if form.is_valid():
-
-            # usuarios = Usuario.objects.filter(username=request.user.username)
-            # usuario = usuarios.first()
-            # profesor = "nombre_profesor" # TODO seleccionar desplegable
-            # nombre_grupo = grupo.name.replace(" ", "_")
-            # comando = "python creargrupo.py " + usuario.api_id + " " + usuario.api_hash + " " + nombre_grupo + " " + usuario.telegram_id + " " + profesor
-            # os.system(comando)
-            # archivo = open("creargrupo.txt","r")
-            # grupo.telegram_id = archivo.read()
-            # archivo.close()
-
-            form.save()
+            profesores = ""
+            for contact in form.cleaned_data.get('contacts'):
+                profesores += " " + str(contact)
+            print(profesores.lstrip())
+            usuarios = Usuario.objects.filter(username=request.user.username)
+            usuario = usuarios.first()
+            nombre_grupo = request.POST.get('name').replace(" ", "_")
+            comando = "python creargrupo.py " + usuario.api_id + " " + usuario.api_hash + " " + nombre_grupo + " " + usuario.telegram_id + " " + profesores
+            os.system(comando)
+            grupo =form.save()
+            archivo = open("creargrupo.txt","r")
+            grupo.telegram_id = archivo.read()
+            archivo.close()
+            grupo.save()
             return redirect('/grupos')
         else:
             print("Form no válido")
             print(form.errors.as_data())
             # form = AltaGrupoForm()
 
-        return render(request, 'create-group.html', {'form':form})
+        return render(request, 'create-group.html', { 'form' : form})
     elif request.method == "GET":
         form = AltaGrupoForm()
         return render(request, "create-group.html", { 'form' : form})
@@ -211,6 +213,7 @@ def send_message(request):
             usuarios = Usuario.objects.filter(username=request.user.username)
             usuario = usuarios.first()
             texto = request.POST.get('text_message')
+            
             grupo = request.POST.get('id_group')
             mensaje = texto.replace(" ", "_")
             comando = "python mensaje.py " + usuario.api_id + " " + usuario.api_hash + " " + str(grupo) + " " + mensaje
