@@ -18,7 +18,8 @@ urlpatterns = [
     path('solicitarkeys', views.solicitar_keys, name='solicitarkeys'),
     path('nuevogrupo', views.create_group, name='nuevogrupo'),
     path('grupos', views.get_groups, name='grupos'),
-    path('grupos/<int:id>', views.get_group, name='grupo'),
+    path('editargrupo/<int:id>', views.edit_group, name='editargrupo'),
+    path('eliminargrupo/<int:id>', views.delete_group, name='eliminargrupo'),
     
     path('nuevocontacto', views.create_contact, name='nuevocontacto'),
     path('editarcontacto/<str:name>', views.edit_contact, name='editarcontacto'),

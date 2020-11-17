@@ -18,7 +18,7 @@
                 <div class="col-xl-12">
                     <div class="card">
                         <div class="card-header">
-                            <h5>{{group.name}}</h5>
+                            <h5>Editar grupo: {{group.name}}</h5>
                         </div>
                         <div class="card-block table-border-style">
                             <form>
@@ -51,7 +51,8 @@
                                         {% endfor %}
                                     </select>
                                 </div>
-                                <button type="submit" class="btn btn-primary shadow-2 mb-4">Actualizar</button>
+                                <button type="submit" class="btn btn-primary shadow-2 mb-4 float-right">Guardar</button>
+                                <a class="btn btn-secondary float-right" href="/grupos" role="button">Cancelar</a>
                             </form>
                         </div>
                     </div>

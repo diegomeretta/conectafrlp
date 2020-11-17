@@ -27,7 +27,7 @@ class AltaUsuarioForm(ModelForm):
 class AltaGrupoForm(ModelForm):
     class Meta:
         model = Group
-        fields = ["name", "career", "comision", "subject", "contacts"]
+        fields = ["name", "career", "commission", "subject", "contacts"]
         widgets = {
             'name': TextInput(attrs={
                 "placeholder" : "",
@@ -36,8 +36,7 @@ class AltaGrupoForm(ModelForm):
             'career': Select(attrs={
                 "class": "form-control"
             }),
-            'comision': TextInput(attrs={
-                "placeholder" : "",
+            'commission': Select(attrs={
                 "class": "form-control"
             }),
             'subject': Select(attrs={
@@ -102,8 +101,7 @@ class SendMessageForm(ModelForm):
                 "placeholder" : "Mensaje",
                 "class": "form-control"
             }),
-            'id_group': TextInput(attrs={
-                "placeholder" : "id_grupo",
+            'group': Select(attrs={
                 "class": "form-control"
             })
         }

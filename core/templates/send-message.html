@@ -30,11 +30,16 @@
                                             {{ form.text_message }}
                                         </div>
 
-                                        <div class="input-group mb-3">
-                                            {{ form.id_group }}
+                                        <div class="form-group">
+                                            <label for="inputContactList">Grupos</label>
+                                            <select class="form-control select2" id="inputContactList" name="members[]" multiple="multiple">
+                                                {% for group in groups %}
+                                                    <option>{{ group.name }}</option>
+                                                {% endfor %}
+                                            </select>
                                         </div>
-
-                                        <button type="submit" class="btn btn-primary shadow-2 mb-4">Enviar Mensaje</button>
+                                        <button type="submit" class="btn btn-primary shadow-2 mb-4 float-right">Enviar</button>
+                                        <a class="btn btn-secondary float-right" href="/" role="button">Cancelar</a>
                                     </form>
                                 </div>
                             </div>
