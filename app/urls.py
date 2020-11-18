@@ -20,6 +20,7 @@ urlpatterns = [
     path('grupos', views.get_groups, name='grupos'),
     path('editargrupo/<int:id>', views.edit_group, name='editargrupo'),
     path('eliminargrupo/<int:id>', views.delete_group, name='eliminargrupo'),
+    path('enviarmensajegrupo/<str:name>', views.delete_group, name='enviarmensajegrupo'),
     
     path('nuevocontacto', views.create_contact, name='nuevocontacto'),
     path('editarcontacto/<str:name>', views.edit_contact, name='editarcontacto'),

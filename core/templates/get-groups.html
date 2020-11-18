@@ -51,10 +51,13 @@
                                                 <td>{{group.commission_name}}</td>
                                                 <td>{{group.subject_name}}</td>
                                                 <td>
-                                                    <a href="/editargrupo/{{group.id}}" class="float-left">
+                                                    <a href="#" class="float-left" data-toggle="modal" data-target="#" data-name="{{group.name}}" id="sendMessageButton{{group.name}}">
+                                                        <i class="material-icons" data-toggle="tooltip" title="Enviar Mensaje">&#xe0ca;</i>
+                                                    </a>
+                                                    <a href="/editargrupo/{{group.id}}" class="float-left m-l-10 m-r-10">
                                                         <i class="material-icons" data-toggle="tooltip" title="Editar">&#xE254;</i>
                                                     </a>
-                                                    <a href="eliminargrupo/{{group.id}}" class="delete float-left" data-toggle="modal" data-target="#delete-confirmation-model" data-name="{{group.name}}" id="deleteButton{{group.name}}">
+                                                    <a href="eliminargrupo/{{group.id}}" class="delete float-left" data-toggle="modal" data-target="#delete-confirmation-modal" data-name="{{group.name}}" id="deleteButton{{group.name}}">
                                                         <i class="material-icons" data-toggle="tooltip" title="Borrar">&#xE872;</i>
                                                     </a>
                                                 </td>
@@ -67,7 +70,8 @@
                             </div>
                         </div>
                     </div>
-                    {% include 'delete-confirmation-model.html' %}
+                    {% include 'delete-confirmation-modal.html' %}
+                    {% include 'send-message-modal.html' %}
                     <!-- [ Main Content ] end -->
                 </div>
             </div>
@@ -87,7 +91,7 @@
         });
     });
 
-    $('#delete-confirmation-model').on('show.bs.modal', function (event) {
+    $('#delete-confirmation-modal').on('show.bs.modal', function (event) {
         var button = $(event.relatedTarget)
         var recipient = button.data('name')
         var modal = $(this)
@@ -96,7 +100,7 @@
     });
 
     $(document).on('click', '.delete', function () {
-        $("#delete-confirmation-model").attr("caller-id", $(this).attr("id"));
+        $("#delete-confirmation-modal").attr("caller-id", $(this).attr("id"));
     });
 
     $(document).on('click', '#confirmDeleteButtonModal', function () {
