@@ -61,6 +61,10 @@ def solicitar_keys(request):
             usuario.username = request.user.username
             usuario.save()
 
+            # Creo archivo de configuración
+            with open('config.ini', 'w') as archi:
+                archi.writelines("[pyrogram]", "api_id = 12345", "api_hash = 0123456789abcdef0123456789abcdef")
+
             return redirect('/')
         else:
             form = AltaUsuarioForm()
@@ -79,7 +83,8 @@ def create_group(request):
             usuarios = Usuario.objects.filter(username=request.user.username)
             usuario = usuarios.first()
             nombre_grupo = request.POST.get('name').replace(" ", "_")
-            comando = "python creargrupo.py " + usuario.api_id + " " + usuario.api_hash + " " + nombre_grupo + " " + usuario.telegram_id + " " + profesores
+            comando = "python creargrupo.py " + usuario.api_id + " " + usuario.api_hash + " " + nombre_grupo + " " + usuario.username + " " + profesores
+            print(comando)
             os.system(comando)
             grupo =form.save()
             archivo = open("creargrupo.txt","r")

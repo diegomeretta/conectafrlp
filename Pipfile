@@ -17,6 +17,8 @@ whitenoise = "*"
 Django = "==3.1.*"
 Unipath = "*"
 Pyrogram = "*"
+python-decouple = "*"
+TgCrypto = "*"
 
 [requires]
 python_version = "3.8"
