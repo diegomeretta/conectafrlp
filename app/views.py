@@ -61,10 +61,6 @@ def solicitar_keys(request):
             usuario.username = request.user.username
             usuario.save()
 
-            # Creo archivo de configuración
-            with open('config.ini', 'w') as archi:
-                archi.writelines("[pyrogram]", "api_id = 12345", "api_hash = 0123456789abcdef0123456789abcdef")
-
             return redirect('/')
         else:
             form = AltaUsuarioForm()
