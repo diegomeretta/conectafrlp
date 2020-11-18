@@ -72,6 +72,9 @@ class Group(models.Model):
     current_year = models.IntegerField(default=datetime.datetime.now().year)
     telegram_id = models.CharField(max_length=32, default="")
 
+    def __str__(self):
+        return self.name
+
 class Message(models.Model):
     text_message = models.CharField(max_length=32)
     group = models.ForeignKey(Group, on_delete=models.CASCADE)
