@@ -127,6 +127,7 @@ def edit_group(request, id):
             print("OK\n")
             group = form.save()
             group.save()
+            messages.add_message(request, messages.SUCCESS, "Grupo modificado exitosamente.")
             return redirect('/grupos')
         else:
             print(form.errors.as_data())
