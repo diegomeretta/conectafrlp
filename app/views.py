@@ -79,7 +79,8 @@ def create_group(request):
             usuarios = Usuario.objects.filter(username=request.user.username)
             usuario = usuarios.first()
             nombre_grupo = request.POST.get('name').replace(" ", "_")
-            comando = "python creargrupo.py " + usuario.api_id + " " + usuario.api_hash + " " + nombre_grupo + " " + usuario.telegram_id + " " + profesores
+            comando = "python creargrupo.py " + usuario.api_id + " " + usuario.api_hash + " " + nombre_grupo + " " + usuario.username + " " + profesores
+            print(comando)
             os.system(comando)
             grupo = form.save()
             archivo = open("creargrupo.txt","r")
