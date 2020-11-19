@@ -58,10 +58,6 @@ class EditGroupForm(ModelForm):
         model = Group
         fields = ["current_year", "career", "commission", "subject", "contacts"]
         widgets = {
-            'name': TextInput(attrs={
-                "placeholder" : "",
-                "class": "form-control"
-            }),
             'current_year': TextInput(attrs={
                 "placeholder" : "",
                 "class": "form-control"

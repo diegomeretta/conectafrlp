@@ -119,14 +119,20 @@ def get_groups(request):
 
 @login_required(login_url="/login/")
 def edit_group(request, id):
+    group = Group.objects.get(id=id)    
     if request.method == "POST":
-        form = AltaGrupoForm(request.POST)
+        form = EditGroupForm(request.POST, instance=group)
         
-        #Acá tendría que agregar usuarios
+        if form.is_valid():
+            print("OK\n")
+            group = form.save()
+            group.save()
+            return redirect('/grupos')
+        else:
+            print(form.errors.as_data())
     elif request.method == "GET":
-        form = EditGroupForm()
-        group = Group.objects.get(id=id)
-        
+        form = EditGroupForm(instance=group)
+
         return render(request, "edit-group.html", {'form': form, 'group':group})
 
 @login_required(login_url="/login/")

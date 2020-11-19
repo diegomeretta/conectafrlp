@@ -21,7 +21,7 @@
                             <h5>Editar grupo: {{group.name}}</h5>
                         </div>
                         <div class="card-block table-border-style">
-                            <form>
+                            <form role="form" method="post" action="">
                                 {% csrf_token %}
                                 <div class="form-group">
                                     <label for="inputCareer">Carrera</label>
