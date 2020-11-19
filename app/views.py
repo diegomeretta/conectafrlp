@@ -13,7 +13,7 @@ from django.template import loader
 from django.http import HttpResponse
 from django import template
 from .forms import AltaUsuarioForm, AltaGrupoForm, EditGroupForm, CreateContactForm, SendMessageForm, EditContactForm
-from .models import Group, Usuario, Contact, Rol, Message, Subject
+from .models import Group, Usuario, Contact, Rol, Message, Subject, Commission
 from os import system
 import os
 
@@ -79,9 +79,10 @@ def create_group(request):
             usuarios = Usuario.objects.filter(username=request.user.username)
             usuario = usuarios.first()
             nombre_grupo = request.POST.get('name').replace(" ", "_")
-            comando = "python creargrupo.py " + usuario.api_id + " " + usuario.api_hash + " " + nombre_grupo + " " + usuario.telegram_id + " " + profesores
+            comando = "python creargrupo.py " + usuario.api_id + " " + usuario.api_hash + " " + nombre_grupo + " " + usuario.username + " " + profesores
+            print(comando)
             os.system(comando)
-            grupo =form.save()
+            grupo = form.save()
             archivo = open("creargrupo.txt","r")
             grupo.telegram_id = archivo.read()
             archivo.close()
@@ -103,6 +104,8 @@ def get_groups(request):
     for group in groups:
         subject = Subject.objects.filter(id=group.subject.id).first()
         group.subject_name = subject.name
+        commission = Commission.objects.filter(id=group.commission.id).first()
+        group.commission_name = commission.name
 
     paginator = Paginator(groups, 5)
     page = request.GET.get('page')
