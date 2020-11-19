@@ -21,35 +21,38 @@
                             <h5>Editar grupo: {{group.name}}</h5>
                         </div>
                         <div class="card-block table-border-style">
-                            <form>
+                            <form role="form" method="post" action="">
                                 {% csrf_token %}
                                 <div class="form-group">
                                     <label for="inputCareer">Carrera</label>
-                                    <input type="text" class="form-control" id="inputCareer"
-                                        placeholder="{{group.career}}">
+                                    <div class="input-group mb-3">
+                                        {{ form.career }}
+                                    </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="inputSubject">Materia</label>
-                                    <input type="text" class="form-control" id="inputSubject"
-                                        placeholder="{{group.subject}}">
+                                    <div class="input-group mb-3">
+                                        {{ form.subject }}
+                                    </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="inputComision">Comisión</label>
-                                    <input type="text" class="form-control" id="inputComision"
-                                        placeholder="{{group.comision}}">
+                                    <div class="input-group mb-3">
+                                        {{ form.commission }}
+                                    </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="inputCurrentYear">Año</label>
-                                    <input type="text" class="form-control" id="inputCurrentYear"
-                                        placeholder="{{group.current_year}}">
+                                    <div class="input-group mb-3">
+                                        {{ form.current_year }}
+                                    </div>
+                                </input>
                                 </div>
                                 <div class="form-group">
                                     <label for="inputContactList">Integrantes</label>
-                                    <select class="form-control select2" id="inputContactList" name="members[]" multiple="multiple">
-                                        {% for contact in contacts %}
-                                        <option>@{{contact}}</option>
-                                        {% endfor %}
-                                    </select>
+                                    <div class="input-group mb-3">
+                                        {{ form.contacts }}
+                                    </div>
                                 </div>
                                 <button type="submit" class="btn btn-primary shadow-2 mb-4 float-right">Guardar</button>
                                 <a class="btn btn-secondary float-right" href="/grupos" role="button">Cancelar</a>

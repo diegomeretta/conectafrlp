@@ -12,7 +12,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.template import loader
 from django.http import HttpResponse
 from django import template
-from .forms import AltaUsuarioForm, AltaGrupoForm, CreateContactForm, SendMessageForm, EditContactForm
+from .forms import AltaUsuarioForm, AltaGrupoForm, EditGroupForm, CreateContactForm, SendMessageForm, EditContactForm
 from .models import Group, Usuario, Contact, Rol, Message, Subject, Commission
 from os import system
 import os
@@ -122,9 +122,22 @@ def get_groups(request):
 
 @login_required(login_url="/login/")
 def edit_group(request, id):
-    group = Group.objects.get(id=id)
-    contacts = Contact.objects.all()
-    return render(request, "edit-group.html", {'group':group, 'contacts':contacts})
+    group = Group.objects.get(id=id)    
+    if request.method == "POST":
+        form = EditGroupForm(request.POST, instance=group)
+        
+        if form.is_valid():
+            print("OK\n")
+            group = form.save()
+            group.save()
+            messages.add_message(request, messages.SUCCESS, "Grupo modificado exitosamente.")
+            return redirect('/grupos')
+        else:
+            print(form.errors.as_data())
+    elif request.method == "GET":
+        form = EditGroupForm(instance=group)
+
+        return render(request, "edit-group.html", {'form': form, 'group':group})
 
 @login_required(login_url="/login/")
 def delete_group(request, id):
