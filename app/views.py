@@ -234,6 +234,7 @@ def send_message(request):
             comando = "python mensaje.py " + usuario.api_id + " " + usuario.api_hash + " " + str(grupo.telegram_id) + " " + mensaje
             print(comando)
             respuesta = os.system(comando)
+            messages.add_message(request, messages.SUCCESS, "Mensaje enviado exitosamente.")
             return redirect('/enviarmensaje')
         else:
             form = SendMessageForm()
