@@ -1,4 +1,4 @@
-from django.forms import ModelForm, TextInput, Select, SelectMultiple
+from django.forms import ModelForm, TextInput, Select, SelectMultiple, Textarea
 from .models import Usuario, Group, Contact, Message
 
 class AltaUsuarioForm(ModelForm):
@@ -119,8 +119,7 @@ class SendMessageForm(ModelForm):
         model = Message
         fields = ["text_message", "group"]
         widgets = {
-            'text_message': TextInput(attrs={
-                "placeholder" : "Mensaje",
+            'text_message': Textarea(attrs={
                 "class": "form-control"
             }),
             'group': Select(attrs={
