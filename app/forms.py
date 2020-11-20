@@ -53,6 +53,33 @@ class AltaGrupoForm(ModelForm):
         super(AltaGrupoForm, self).__init__(*args, **kwargs)
         self.fields['contacts'].queryset = Contact.objects.filter(contact_rol_id=1)
 
+class EditGroupForm(ModelForm):
+    class Meta:
+        model = Group
+        fields = ["current_year", "career", "commission", "subject", "contacts"]
+        widgets = {
+            'name': TextInput(attrs={
+                "placeholder" : "",
+                "class": "form-control"
+            }),
+            'current_year': TextInput(attrs={
+                "placeholder" : "",
+                "class": "form-control"
+            }),
+            'career': Select(attrs={
+                "class": "form-control"
+            }),
+            'commission': Select(attrs={
+                "class": "form-control"
+            }),
+            'subject': Select(attrs={
+                "class": "form-control"
+            }),
+            'contacts': SelectMultiple(attrs={
+                "class": "form-control"
+            })
+        }
+
 class CreateContactForm(ModelForm):
     class Meta:
         model = Contact
