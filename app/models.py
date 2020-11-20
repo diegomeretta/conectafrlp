@@ -74,8 +74,8 @@ class Group(models.Model):
 
     def __str__(self):
         return self.name
-        
+
 class Message(models.Model):
-    text_message = models.CharField(max_length=32)
+    text_message = models.CharField(max_length=255)
     group = models.ForeignKey(Group, on_delete=models.CASCADE)
 
