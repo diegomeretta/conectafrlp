@@ -122,14 +122,24 @@ def get_groups(request):
 
 @login_required(login_url="/login/")
 def edit_group(request, id):
-    group = Group.objects.get(id=id)    
+    group = Group.objects.get(id=id)  
     if request.method == "POST":
         form = EditGroupForm(request.POST, instance=group)
         
         if form.is_valid():
-            print("OK\n")
+            contacts = ""
+            for contact in form.cleaned_data.get('contacts'):
+                contacts += " " + str(contact)
+
+            users = Usuario.objects.filter(username=request.user.username)
+            user = users.first()
+
+            comando = "python agregarintegrantes.py " + user.api_id + " " + user.api_hash + " " + str(group.telegram_id) + " " + contacts
+            os.system(comando)
+
             group = form.save()
             group.save()
+            
             messages.add_message(request, messages.SUCCESS, "Grupo modificado exitosamente.")
             return redirect('/grupos')
         else:
